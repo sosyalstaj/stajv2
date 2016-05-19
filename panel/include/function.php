@@ -49,6 +49,7 @@
 		else if($sayfa=="mesajlar"){
 			require_once("brojem.php");
 		}
+<<<<<<< HEAD
 
 		else if($sayfa=="projeler-goster"){
 			require_once("projeGoster.php");
@@ -62,6 +63,17 @@
 			require_once("iletisim.php");
 		}
 
+=======
+		else if($sayfa=="iletisim"){
+			require_once("iletisim.php");
+		}
+		else if($sayfa=="basvurular-yap"){
+			require_once("basvur.php");
+		}
+		else if($sayfa=="basvurular-goster"){
+			require_once("ogrenci_basvuru_goster.php");
+		}
+>>>>>>> origin/master
 	}
 
 	function islemler()
