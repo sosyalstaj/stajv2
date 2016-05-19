@@ -45,7 +45,7 @@
                 <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-red">
-                  Hakkinda
+                  Hakkında
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -118,7 +118,7 @@
 					    Gmail : <?php echo $iletisim["gmail"]; ?><br>
                     </div>
                     <div class="timeline-footer">
-                      <a class="btn btn-primary btn-xs">Duzenle</a>
+                      <a href="index.php?sayfa=iletisim" class="btn btn-primary btn-xs">Duzenle</a>
                      
                     </div>
                   </div>
