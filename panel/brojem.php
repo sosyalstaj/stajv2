@@ -1,6 +1,5 @@
 ﻿<?php
 	
-	require_once("include/config.php");
 	//$_SESSION['staj']->getID();
 	$id=$_SESSION['staj']['id'];
 	

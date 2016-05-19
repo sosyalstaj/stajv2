@@ -37,8 +37,10 @@
 			require_once("staj_form.php");
 		}
 		else if($sayfa=="profil-goster"){
-			require_once("/profil/index.php");
-		
+			require_once("/profil/index.php");		
+		}
+		else if($sayfa=="mesajlar"){
+			require_once("brojem.php");
 		}
 	}
 

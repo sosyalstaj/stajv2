@@ -8,7 +8,7 @@
             <li><a href="isveren.php?sayfa=profil-duzenle">Düzenle</a></li>
           </ul>
         </li>
-        <li><a href="isveren.php?sayfa=mesajlar"><i class="fa fa-link"></i> <span>MESAJLAR</span></a></li>
+        <li><a href="index.php?sayfa=mesajlar"><i class="fa fa-link"></i> <span>MESAJLAR</span></a></li>
 		 <li class="treeview">
           <a href="isveren.php?sayfa=profil"><i class="fa fa-link"></i> <span>PROJELER</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">

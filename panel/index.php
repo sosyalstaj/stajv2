@@ -47,11 +47,7 @@
   </aside>
 
   <div class="content-wrapper">
-    <section class="content-header">
-      <h1>   
-        <small>  <?php echo $durum; ?>  </small>
-      </h1>
-    </section>
+		<?php echo $durum; ?>
     <section class="content">
      
       <div class="row">

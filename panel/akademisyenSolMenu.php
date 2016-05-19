@@ -8,7 +8,7 @@
             <li><a href="akademisyen.php?sayfa=profil-duzenle">Düzenle</a></li>
           </ul>
         </li>
-        <li><a href="akademisyen.php?sayfa=mesajlar"><i class="fa fa-link"></i> <span>MESAJLAR</span></a></li>
+        <li><a href="index.php?sayfa=mesajlar"><i class="fa fa-link"></i> <span>MESAJLAR</span></a></li>
        <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>KARİYER</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
