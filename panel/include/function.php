@@ -307,10 +307,10 @@
 		$adi=temizle(@$_POST["ad"]);
 		$soyadi=temizle(@$_POST["soyad"]);
 		$uni=temizle(@$_POST["uni"]);
-	
+		$hakkimda=temizle(@$_POST["hakkimda"]);
 		global $conn;
 		$msg ="";
-		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail',hakkimda='$hakkimda' ";
 		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
 		if($_FILES["foto"]["name"] != "")
 		{
