@@ -44,7 +44,13 @@
 			require_once("staj_form.php");
 		}
 		else if($sayfa=="profil-goster"){
-			require_once("/profil/index.php");		
+			if($_SESSION["staj"]["rol"] == 1){
+				 require_once("ogrProfilGor.php");
+			}else if($_SESSION["staj"]["rol"] == 2){
+				 require_once("akademisyenProfilGor.php");
+			}else if($_SESSION["staj"]["rol"] == 3){
+				require_once("isyeriProfilGor.php");
+			} 
 		}
 		else if($sayfa=="mesajlar"){
 			require_once("brojem.php");
