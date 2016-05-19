@@ -80,13 +80,13 @@
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> <?php echo $hakkinda["tarih"]; ?></span>
-                    <h3 class="timeline-header"><a href="#"> <?php echo $hakkinda["baslik"]; ?></h3>
+                    <h3 class="timeline-header"><a href="#">HAKKINDA <?php // echo $hakkinda["baslik"]; ?></h3>
                     <div class="timeline-body" style="padding-left:10px;">
                       <?php echo $hakkinda["icerik"]; ?>
                     </div>
                     <div class="timeline-footer">
                       <a href="index.php?sayfa=profil-duzenle" class="btn btn-primary btn-xs">Duzenle</a>
-                      <a class="btn btn-danger btn-xs">Sil</a>
+                       
                     </div>
                   </div>
                 </li>
@@ -113,9 +113,7 @@
                     <div class="timeline-body">
                     <?php echo $proje["p_icerik"]; ?>
                     </div>
-                    <div class="timeline-footer">
-                      <a class="btn btn-warning btn-flat btn-xs">Tamamini Gor</a>
-                    </div>
+                    
                   </div>
                 </li>
 				<?php
@@ -145,7 +143,7 @@
 					    Gmail : <?php echo $iletisim["gmail"]; ?><br>
                     </div>
                     <div class="timeline-footer">
-                      <a class="btn btn-primary btn-xs">Duzenle</a>
+                      <a href="index.php?sayfa=iletisim" class="btn btn-primary btn-xs">Duzenle</a>
                      
                     </div>
                   </div>

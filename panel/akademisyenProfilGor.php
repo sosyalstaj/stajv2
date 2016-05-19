@@ -90,41 +90,7 @@
                     </div>
                   </div>
                 </li>
-				 <li class="time-label">
-                  <span class="bg-red">
-                  Projeler
-                  </span>
-                </li>
-                <?php
-				$query2="SELECT*FROM tbl_proje where user_id=$id";//".$_SESSION["staj"]->getId();
-				$sonuc2 =mysqli_query($conn,$query2);
-				if(@mysqli_num_rows($sonuc2) >=1)
-				{
-				$k=0;
-				while($proje=mysqli_fetch_array($sonuc2)){
-					$k++;
-			
-				?>
-				<li>
-                  <i class="fa fa-comments bg-yellow"></i>
-                  <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> <?php echo $proje["tarih"]; ?></span>
-                    <h3 class="timeline-header"><a href="#"><?php echo $proje["p_adi"]; ?> </a></h3>
-                    <div class="timeline-body">
-                    <?php echo $proje["p_icerik"]; ?>
-                    </div>
-                    <div class="timeline-footer">
-                      <a class="btn btn-warning btn-flat btn-xs">Tamamini Gor</a>
-                    </div>
-                  </div>
-                </li>
-				<?php
 				
-				
-			}
-		}
-		
-		?>
                   <li class="time-label">
                   <span class="bg-red">
                   iletisim
