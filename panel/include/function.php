@@ -221,6 +221,7 @@
 		$il=temizle(@$_POST["il"]);
 		$ilce=temizle(@$_POST["ilce"]);
 		$adres=temizle(@$_POST["adres"]);
+		$akademisyen=temizle(@$_POST["akademisyen"]);
 		$hakkimda=temizle(@$_POST["hakkimda"]);
 
 		global $conn;
@@ -246,7 +247,7 @@
 		$query .=" where id =$id ; ";
 		$query2 ="update tbl_ogrenci SET cinsiyet =$cinsiyet,il=$il,ilce =$ilce 
 			,adres='$adres', uni =$uni , fakulte=$fakulte ,bolum =$bolum ,
-			 sinif =$sinif,okul_no ='$okul_no' where user_id=$id";
+			 sinif =$sinif,okul_no ='$okul_no',aka_id=$akademisyen where user_id=$id";
 		
 		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
 		{
