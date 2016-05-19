@@ -31,12 +31,11 @@
           </ul>
         </li>
 					<li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Staj Eşleşmeleri</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>STAJ EŞLEŞMELERİ</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="index.php?sayfa=staj_sonuclananlar">Sonuçlananlar</a></li>
             <li><a href="index.php?sayfa=staj_beklenenler">Bekleyenler</a></li>
           </ul>
         </li>
-		 <li><a href="index.php?sayfa=hakkinda"><i class="fa fa-link"></i> <span>HAKKINDA</span></a></li>
 		  <li><a href="index.php?sayfa=iletisim"><i class="fa fa-link"></i> <span>İLETİŞİM</span></a></li>
       </ul>
