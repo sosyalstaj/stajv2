@@ -5,9 +5,9 @@ if(!$conn){
 }
 else{
 	
-	$sorgu="select * from tbl_akademisyen where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu2="select * from tbl_kullanici where id=2"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu3="select * from tbl_akademisyen_uni inner join tbl_akademisyen on tbl_akademisyen_uni.user_id=tbl_akademisyen.user_id inner join tbl_uni on tbl_uni.id=tbl_akademisyen_uni.uni_id where tbl_akademisyen.user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu="select * from tbl_akademisyen where user_id=".$_SESSION["staj"]["id"];
+	$sorgu2="select * from tbl_kullanici where id=".$_SESSION["staj"]["id"];
+	$sorgu3="select * from tbl_akademisyen_uni inner join tbl_akademisyen on tbl_akademisyen_uni.user_id=tbl_akademisyen.user_id inner join tbl_uni on tbl_uni.id=tbl_akademisyen_uni.uni_id where tbl_akademisyen.user_id=".$_SESSION["staj"]["id"];
 	$sorgu4="select * from tbl_uni";
 	if($sonuc=mysqli_query($conn,$sorgu))
 	{	
@@ -51,14 +51,16 @@ if(@$_POST["duzenle"]){
 if(!$conn){
 	echo "veritabani bağlanti hatasi";
 }else{
-	$sorgu="Update tbl_akademisyen SET tc=".$tc.",unvan=\"".$unvan."\" where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu2="Update tbl_kullanici SET adi=\"".$adi."\" , soyadi=\"".$soyadi."\" , mail=\"".$mail."\" , parola=\"".MD5($parola)."\" , foto=\"".$foto."\" where id=2"/*.$_SESSION["staj"]->getID().""*/;
+	if ($parola!="")
+	{
+	$sorgu="Update tbl_akademisyen SET tc=".$tc.",unvan=\"".$unvan."\" where user_id=".$_SESSION["staj"]["id"];
+	$sorgu2="Update tbl_kullanici SET adi=\"".$adi."\" , soyadi=\"".$soyadi."\" , mail=\"".$mail."\" , parola=\"".MD5($parola)."\" , foto=\"".$foto."\" where id=".$_SESSION["staj"]["id"];
 	$sorgu4="select * from tbl_uni where uni_adi='".$uni."'";
 	if($sonuc4=mysqli_query($conn,$sorgu4))
 	{	
 		$array4=mysqli_fetch_array($sonuc4);
 	}
-	$sorgu3="Update tbl_akademisyen_uni SET uni_id=".$array4["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu3="Update tbl_akademisyen_uni SET uni_id=".$array4["id"]." where user_id=".$_SESSION["staj"]["id"];
 		if(mysqli_query($conn,$sorgu)&&mysqli_query($conn,$sorgu2)&&mysqli_query($conn,$sorgu3)){
 			
 			echo "Güncellendi.";
@@ -68,8 +70,13 @@ if(!$conn){
 		{ 
 			echo "Güncellenemedi.";
 }
-	
+	}		else
+{
+	echo "şifre boş girildi";
 }
+
+}
+
 }
 ?>
 
@@ -155,10 +162,9 @@ if(!$conn){
                 </div>
               </div>
               
-              <div class="box-footer">
+              
                 <input type="submit" class="btn btn-info pull-right" name="duzenle" value="Güncelle"/>
-              </div>
-              <!-- /.box-footer -->
+              
             </form>
 		</div>
 	</center>

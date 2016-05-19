@@ -31,7 +31,14 @@
 		$sayfa =@$_GET["sayfa"];
 		if($sayfa =="profil-duzenle")
 		{
-			require_once("ogrProfilDuzenle.php");
+			if($_SESSION["staj"]["rol"] == 1){
+				 require_once("ogrProfilDuzenle.php");
+			}else if($_SESSION["staj"]["rol"] == 2){
+				 require_once("akademisyenProfilDuzenle.php");
+			}else if($_SESSION["staj"]["rol"] == 3){
+				require_once("isverenProfilDuzenle.php");
+			} 
+           
 		}
 		else if($sayfa=="form-goster"){
 			require_once("staj_form.php");
