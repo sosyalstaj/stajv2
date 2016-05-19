@@ -1,7 +1,7 @@
 <div id="copyright">
     <div class="container">
         <div class="col-md-6">
-            <p class="pull-left">© 2016 Your name goes here.</p>
+            <p class="pull-left">© 2016 Sosyal Staj</p>
         </div>
         <div class="col-md-6">
 			<div id="footer">

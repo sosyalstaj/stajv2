@@ -5,8 +5,8 @@
 
                 <a class="navbar-brand home" href="index.php" data-animate-hover="bounce">
 
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs">
+                    <img src="img/logo.png" class="hidden-xs">
+                    <img src="img/logo-small.png" class="visible-xs">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
