@@ -160,6 +160,21 @@
 		}
 	}
 
+	function akademisyenListele($uni_id)
+	{
+		global $conn;
+		$query ="SELECT K.adi,K.soyadi,K.id FROM tbl_akademisyen as UID 
+		INNER JOIN tbl_kullanici as K on UID.user_id = K.id WHERE UID.uni_id = $uni_id";
+		$sonuc =mysqli_query($conn,$query);
+		if($sonuc)
+		{
+			echo "<option value='-1'>Akademisyen Seç</option>";
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['adi']." ".$row['soyadi']."</option>";
+			}
+		}
+	}
+
 	function profilGuncelle()
 	{
 		$id =$_SESSION["staj"]["id"];
@@ -177,6 +192,7 @@
 		$il=temizle(@$_POST["il"]);
 		$ilce=temizle(@$_POST["ilce"]);
 		$adres=temizle(@$_POST["adres"]);
+		$aka=temizle(@$_POST["akademisyen"]);
 
 		global $conn;
 		$msg ="";
@@ -201,7 +217,7 @@
 		$query .=" where id =$id ; ";
 		$query2 ="update tbl_ogrenci SET cinsiyet =$cinsiyet,il=$il,ilce =$ilce 
 			,adres='$adres', uni =$uni , fakulte=$fakulte ,bolum =$bolum ,
-			 sinif =$sinif,okul_no ='$okul_no' where user_id=$id";
+			 sinif =$sinif,okul_no ='$okul_no' ,aka_id=$aka where user_id=$id";
 		
 		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
 		{
