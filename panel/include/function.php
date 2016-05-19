@@ -30,16 +30,15 @@
 	{
 		$sayfa =@$_GET["sayfa"];
 		if($sayfa =="profil-duzenle")
-		{
 			require_once("ogrProfilDuzenle.php");
-		}
-		else if($sayfa=="form-goster"){
+		else if($sayfa=="form-goster")
 			require_once("staj_form.php");
-		}
-		else if($sayfa=="profil-goster"){
+		else if($sayfa=="profil-goster")
 			require_once("/profil/index.php");
-		
-		}
+		else if($_SESSION["staj"]["rol"] == 1&& $sayfa =="profil-duzenle")
+            require_once("ogrProfilDuzenle.php");
+		else if($_SESSION["staj"]["rol"] == 2&& $sayfa =="profil-duzenle")
+            require_once("akademisyenProfilDuzenle.php");
 	}
 
 	function islemler()
