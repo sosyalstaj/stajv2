@@ -50,7 +50,7 @@
 					{
 						$.ajax({
 							type:"POST",
-							url:"ogrenci/include/mesajAjax.php",
+							url:"mesajAjax.php",
 							data:konu,
 							success:function(sonuc)
 							{
@@ -128,6 +128,14 @@ if($sonuc2){
 					<?php echo " ".Date("j-n-o"); ?>
               </div>
             </div>
+			<!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="mailbox-controls">
+              </div>
+              <div class="table-responsive mailbox-messages">
+                <table class="table table-hover table-striped">
+                  <tbody>
+			
 		<?php
 		global $conn;
 
@@ -138,19 +146,18 @@ if($sonuc2){
 		if($sonuc){
 			while($sutun=mysqli_fetch_row($sonuc)){
 				echo '				
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <div class="mailbox-controls">
-              </div>
-              <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped">
-                  <tbody>
+            
                   <tr>
-                    <td><img src="'.$sutun[2].'" /></td>
+                    <td><img src="'.$sutun[2].'" width="64px" height="64px" /></td>
                     <td class="mailbox-name" ><a href="#" id="'.$sutun[4].'" class="mesajiicerik" >'.$sutun[0]." ".$sutun[1].'</a></td>
 					<td class="mailbox-date">'.$sutun[3].'</td>
                   </tr>
-                  </tbody>
+                  ';
+				
+			}
+		}
+		?>	
+		</tbody>
                 </table>
                 <!-- /.table -->
               </div>
@@ -160,11 +167,7 @@ if($sonuc2){
             <div class="box-footer no-padding">
               <div class="mailbox-controls">
               </div>
-            </div>';
-				
-			}
-		}
-		?>	
+            </div>
 		</div>
           <!-- /. box -->
         </div>
@@ -182,6 +185,13 @@ if($sonuc2){
 					<?php echo " ".Date("j-n-o"); ?>
               </div>
             </div>
+			<!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="mailbox-controls">
+              </div>
+              <div class="table-responsive mailbox-messages">
+                <table class="table table-hover table-striped">
+                  <tbody>
 		<?php
 		global $conn;
 
@@ -193,19 +203,18 @@ if($sonuc2){
 			while($sutun=mysqli_fetch_row($sonuc)){
 				echo 
 				'				
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <div class="mailbox-controls">
-              </div>
-              <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped">
-                  <tbody>
+            
                   <tr>
-                    <td><img src="'.$sutun[2].'" /></td>
+                    <td><img src="'.$sutun[2].'" width="64px" height="64px" /></td>
                     <td class="mailbox-name" ><a href="#" id="'.$sutun[4].'" class="mesajiicerikGiden" >'.$sutun[0]." ".$sutun[1].'</a></td>
 					<td class="mailbox-date">'.$sutun[3].'</td>
                   </tr>
-                  </tbody>
+                  ';
+				
+			}
+		}
+		?>
+		</tbody>
                 </table>
                 <!-- /.table -->
               </div>
@@ -215,11 +224,7 @@ if($sonuc2){
             <div class="box-footer no-padding">
               <div class="mailbox-controls">
               </div>
-            </div>';
-				
-			}
-		}
-		?>
+            </div>
 		</div>
           <!-- /. box -->
         </div>		
@@ -505,7 +510,11 @@ $(document).ready(function()
 
 </script>
 
-
+<script>
+  $(function () {
+    $("#compose-textarea").wysihtml5();
+  });
+</script>
 
 
 </body>

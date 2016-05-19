@@ -14926,7 +14926,7 @@ function program17(depth0,data) {
 }(function ($) {
   $.fn.wysihtml5.locale.en = $.fn.wysihtml5.locale['en-US'] = {
     font_styles: {
-      normal: 'Normal text',
+      normal: 'Normal yazý',
       h1: 'Heading 1',
       h2: 'Heading 2',
       h3: 'Heading 3',
@@ -14935,41 +14935,41 @@ function program17(depth0,data) {
       h6: 'Heading 6'
     },
     emphasis: {
-      bold: 'Bold',
-      italic: 'Italic',
-      underline: 'Underline',
-      small: 'Small'
+      bold: 'Kalýn',
+      italic: 'Eðik',
+      underline: 'Altý çizgili',
+      small: 'Küçült'
     },
     lists: {
-      unordered: 'Unordered list',
-      ordered: 'Ordered list',
-      outdent: 'Outdent',
-      indent: 'Indent'
+      unordered: 'Düzensiz Liste',
+      ordered: 'Düzenli Liste',
+      outdent: 'Çýkýntý',
+      indent: 'Girinti'
     },
     link: {
-      insert: 'Insert link',
-      cancel: 'Cancel',
-      target: 'Open link in new window'
+      insert: 'Link Ekle',
+      cancel: 'Ýptal',
+      target: 'Linki yeni sekmede aç'
     },
     image: {
-      insert: 'Insert image',
-      cancel: 'Cancel'
+      insert: 'Görsel Ekle',
+      cancel: 'Ýptal'
     },
     html: {
-      edit: 'Edit HTML'
+      edit: 'HTML Düzenle'
     },
     colours: {
-      black: 'Black',
-      silver: 'Silver',
-      gray: 'Grey',
+      black: 'Siyah',
+      silver: 'Gümüþ',
+      gray: 'Gri',
       maroon: 'Maroon',
-      red: 'Red',
-      purple: 'Purple',
-      green: 'Green',
+      red: 'Kýrmýzý',
+      purple: 'Mor',
+      green: 'Yeþil',
       olive: 'Olive',
       navy: 'Navy',
-      blue: 'Blue',
-      orange: 'Orange'
+      blue: 'Mavi',
+      orange: 'Turuncu'
     }
   };
 }));

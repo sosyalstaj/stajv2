@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+﻿<?php ob_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -188,10 +188,10 @@
          
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="index.php?sayfa=profil-goster" class="btn btn-default btn-flat">Profile</a>
+                  <a href="index.php?sayfa=profil-goster" class="btn btn-default btn-flat">Profil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="cikis.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="cikis.php" class="btn btn-default btn-flat">Çıkış</a>
                 </div>
               </li>
             </ul>

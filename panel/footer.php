@@ -28,6 +28,17 @@
 <script src="dist/js/app.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="dist/js/demo.js"></script>
+<script>
+  $(function () {
+    $("#compose-textarea").wysihtml5();
+  });
+</script>
+<script>
+$(document).ready(function()
+{
+    $("#compose-textarea").wysihtml5();
+ });
+</script>
 </body>
 </html>
 <?php ob_end_flush();?>
