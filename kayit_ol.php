@@ -29,7 +29,7 @@
 	</div>
 	
 	<div class="content-input">
-		<label>  Email Addresi </label>
+		<label>  Email Adresi </label>
 		<div>
 			<input name="email" type="email"  value="">
 		</div>
