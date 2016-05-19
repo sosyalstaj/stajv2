@@ -2,7 +2,7 @@
               <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Anlaşmalar</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tbody><tr>
@@ -20,7 +20,7 @@
 <?php
 
 		global $conn;
-		$query = "SELECT * FROM tbl_basvuru as B INNER JOIN tbl_ogrenci as O on O.user_id =B.ogrenci_id INNER JOIN tbl_kullanici as K on K.id = O.user_id WHERE B.anlasma =1 or B.anlasma =0 and O.aka_id =".$_SESSION["staj"]["id"];
+		$query = "SELECT * FROM tbl_basvuru as B INNER JOIN tbl_ogrenci as O on O.user_id =B.ogrenci_id INNER JOIN tbl_kullanici as K on K.id = O.user_id WHERE B.anlasma =-1 and O.aka_id =".$_SESSION["staj"]["id"];
 		$sonuc = mysqli_query($conn,$query);
 		
 		if($sonuc)
@@ -39,7 +39,7 @@
 				$sonuc2 = mysqli_query($conn,$query2);
 				while ($row2 = mysqli_fetch_array($sonuc2)) {
 					
-				if($row["anlasma"]==0)
+						if($row["anlasma"]==0)
 					$anlasma="Başvurunnuz reddedildi";
 				else if($row["anlasma"]==1)
 					$anlasma="Başvurunnuz kabul edildi";
@@ -49,7 +49,8 @@
 					
                     
                     <tr>
-                      <td><?php echo $k; ?></td>
+                   
+					     <td><?php echo $k; ?></td>
                       <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row["ogrenci_id"]; ?>"><?php echo $row["okul_no"]; ?></a></td>
                       <td>
                        <?php echo $row["sinif"]; ?>

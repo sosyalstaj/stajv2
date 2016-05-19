@@ -100,6 +100,15 @@
 		else if($sayfa=="staj_eslesmeleri"){
 			require_once("akademisyen_staj_gor.php");
 		}
+		else if($sayfa=="staj_sonuclananlar"){
+			require_once("akademisyen_staj_gor.php");
+		}
+		else if($sayfa=="staj_beklenenler"){
+			require_once("akademisyen_staj_gor_beklenenler.php");
+		}
+		else if($sayfa=="profil-gor"){
+			require_once("profilgor.php");
+		}
 		
 	}
 

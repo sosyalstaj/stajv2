@@ -1,12 +1,13 @@
 <?php
 
 
-if(@$_POST["id"])
+if(@$_GET["id"])
 {
 	
 
 
-	$id =$_POST["id"];//  sessiondan gelecek
+	$id =$_GET["id"];//  sessiondan gelecek
+	
 
 		global $conn;
 		$query ="select * from tbl_kullanici where id=$id";
@@ -83,7 +84,7 @@ if(@$_POST["id"])
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> <?php echo $hakkinda["tarih"]; ?></span>
-                    <h3 class="timeline-header"><a href="#"> <?php echo $hakkinda["baslik"]; ?></h3>
+                    <h3 class="timeline-header"><a href="#"> <?php echo $hakkinda["baslik"]; ?></a></h3>
                     <div class="timeline-body" style="padding-left:10px;">
                       <?php echo $hakkinda["icerik"]; ?>
                     </div>
@@ -138,7 +139,7 @@ if(@$_POST["id"])
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> </span>
-                    <h3 class="timeline-header"><a href="#"> Baslica Bilgiler</h3>
+                    <h3 class="timeline-header">Baslica Bilgiler</h3>
                     <div class="timeline-body" style="padding-left:10px;">
 						Facebook : <?php echo $iletisim["facebook"]; ?><br>
 					    Web Site : <?php echo $iletisim["web_site"]; ?><br>
@@ -204,7 +205,7 @@ if(@$_POST["id"])
             <div class="col-md-12">
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
+                  <h3 class="box-title"><i class="fa fa-code"></i> ÖNEMLİ !!!</h3>
                 </div>
                 <div class="box-body">
                   <pre style="font-weight: 600;">
@@ -217,3 +218,16 @@ if(@$_POST["id"])
           </div><!-- /.row -->
 
         </section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
