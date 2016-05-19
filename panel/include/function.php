@@ -82,6 +82,9 @@
 		else if($sayfa=="basvurular-gecmis"){
 			require_once("basvurugecmisi.php");
 		}
+		else if($sayfa=="staj_eslesmeleri"){
+			require_once("akademisyen_staj_gor.php");
+		}
 		
 	}
 
