@@ -34,15 +34,14 @@
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
 					
-					$anlasma="Başvurunnuz bekleniyor";
 				$query2 = "select * from tbl_kullanici where id=".$row["isyeri_id"];
 				$sonuc2 = mysqli_query($conn,$query2);
 				while ($row2 = mysqli_fetch_array($sonuc2)) {
 					
 				if($row["anlasma"]==0)
-					$anlasma="Başvurunnuz reddedildi";
+					$anlasma="Başvuru reddedildi";
 				else if($row["anlasma"]==1)
-					$anlasma="Başvurunnuz kabul edildi";
+					$anlasma="Başvuru kabul edildi";
 				
 			?>
 			
