@@ -85,7 +85,7 @@
                       <?php echo $hakkinda["icerik"]; ?>
                     </div>
                     <div class="timeline-footer">
-                      <a class="btn btn-primary btn-xs">Duzenle</a>
+                      <a href="index.php?sayfa=profil-duzenle" class="btn btn-primary btn-xs">Duzenle</a>
                       <a class="btn btn-danger btn-xs">Sil</a>
                     </div>
                   </div>
