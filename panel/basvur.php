@@ -32,7 +32,11 @@ echo $sorgu2;
 	}
 }
 ?>
-
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+</body>
 
 <center>
 	<div class="box-body">
@@ -63,14 +67,16 @@ echo $sorgu2;
                   <label for="inputPassword3" class="col-sm-2 control-label">Önsöz</label>
 
                   <div class="col-sm-10">
-                    <input name="onsoz"type="text" class="form-control" name="parola" id="inputPassword3" placeholder="Önsöz" />
+                    <input name="onsoz"type="text" class="form-control" id="inputPassword3" placeholder="Önsöz" />
                   </div>
                 </div>
 				      <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Açıklama</label>
 
                   <div class="col-sm-10">
-                    <input type="text" name="aciklama"class="form-control" name="parola" id="inputPassword3" placeholder="Açıklama" />
+                    
+					<textarea  name="aciklama" id="compose-textarea" class="form-control" style="height: 300px" >
+						</textarea>
                   </div>
                 </div>
 
@@ -80,3 +86,10 @@ echo $sorgu2;
             </form>
 		</div>
 	</center>
+<script>
+  $(function () {
+    $("#compose-textarea").wysihtml5();
+  });
+</script>
+</body>
+</html>

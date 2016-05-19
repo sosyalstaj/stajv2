@@ -21,8 +21,8 @@
 	  <li class="treeview">
       <a href="#"><i class="fa fa-edit"></i> <span>BAŞVURULAR</span> <i class="fa fa-angle-left pull-right"></i></a>
       <ul class="treeview-menu">
-        <li><a href="index.php?sayfa=basvurular-goster">Göster</a></li>
-        <li><a href="index.php?sayfa=basvurular-yap">Yap</a></li>
+        <li><a href="index.php?sayfa=basvurular-goster">Başvuru Listesi</a></li>
+        <li><a href="index.php?sayfa=basvurular-yap">Başvuru Yap</a></li>
       </ul>
     </li>
 

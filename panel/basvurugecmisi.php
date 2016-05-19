@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $id=$_SESSION["staj"]["id"];
 
 
@@ -9,16 +9,16 @@ $id=$_SESSION["staj"]["id"];
 <div class="col-md-6" style="width:100%;">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Basvurular</h3>
+                  <h3 class="box-title">Başvurular</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tbody><tr>
                       <th style="width: 10px">#</th>
-                      <th>Onsoz</th>
+                      <th>Önsöz</th>
                       <th>Aciklama</th>
                       <th style="width: 100px">Tarih</th>
-					   <th style="width: 150px">Anlasma</th>
+					   <th style="width: 150px">Anlaşma</th>
                     </tr>
 
 
@@ -48,7 +48,7 @@ $id=$_SESSION["staj"]["id"];
                        <?php echo $row["aciklama"]; ?>
                       </td>
                       <td><?php echo $row["tarih"]; ?></td>
-					  <td><?php if ($row["anlasma"]==1){ echo "Anlasma Saglandi"; } 
+					  <td><?php if ($row["anlasma"]==1){ echo "Anlaşma Sağlandi"; } 
 							 else if ($row["anlasma"]==0) {echo "Reddedildi"; }
 							 else if ($row["anlasma"]==-1) {echo "Onay Bekleniyor"; } ?>
 					  </td>

@@ -1,16 +1,16 @@
-<div class="col-md-6" style="width:100%;">
+﻿<div class="col-md-6" style="width:100%;">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Basvurular</h3>
+                  <h3 class="box-title">Başvurular</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tbody><tr>
                       <th style="width: 10px">#</th>
-                      <th>Onsoz</th>
-                      <th>Aciklama</th>
+                      <th>Önsöz</th>
+                      <th>Açıklama</th>
                       <th style="width: 50">Tarih</th>
-					   <th style="width: 50px">Anlasma</th>
+					   <th style="width: 50px">Anlaşma</th>
                     </tr>
 
 
@@ -30,11 +30,11 @@
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
 				if($row["anlasma"]==0)
-					$anlasma="Başvurunnuz reddedildi";
+					$anlasma="Başvurunuz reddedildi";
 				else if($row["anlasma"]==1)
-					$anlasma="Başvurunnuz kabul edildi";
+					$anlasma="Başvurunuz kabul edildi";
 				else
-					$anlasma="Başvurunnuz bekleniyor";
+					$anlasma="Başvurunuz bekleniyor";
 			?>
 			
 					
