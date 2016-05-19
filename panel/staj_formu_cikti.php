@@ -1,5 +1,5 @@
-<?php session_start();?>
-<script> javascript:window.print(); </script>
+<?php session_start(); ?>
+<script> window.print(); </script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
 <HEAD>
@@ -151,7 +151,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"></TD>
 	<TD class="tr2 td1"><P class="p2 ft0">KARADENİZ TEKNİK ÜNİVERSİTESİ</P></TD>
-	<TD rowspan=2 class="tr0 td3"><P class="p3 ft2"><IMG width="50px" height="50px" src="<?php echo $_SESSION["staj"]["foto"];	?>" id="img1"></P></TD>
+	<TD rowspan=2 class="tr0 td3"><P class="p3 ft2"><IMG width="50px" height="50px" src=" <?php echo $_SESSION["staj"]["foto"];	?>" id="img1" ></P></TD>
 </TR>
 <TR>
 	<TD class="tr3 td0"></TD>
@@ -173,9 +173,14 @@ body {margin-top: 0px;margin-left: 0px;}
 </TR>
 </TABLE>
 <P class="p5 ft8">Üniversitemiz……...Of..…..…Fakülte/Yüksekokul/MYO…..Yazılım Mühendisliği....</P>
-<P class="p6 ft8">Bölümü öğrencisi …<?php echo @$_POST["sure"]; ?>. gün süre ile kurumunuzda/işyerinizde staj yapma talebinde bulunmuştur. 5510 sayılı Kanun gereğince <SPAN class="ft9">sigorta işlemleri (kısa vadeli sigorta kolları primi ile genel sağlık sigortası primi ödemeleri) Üniversitemiz tarafından yapılacak olup</SPAN>, aşağıda kimlik bilgileri verilen öğrencimizin stajını kuruluşunuzda/işyerinizde yapmasında göstereceğiniz ilgiye teşekkür eder, saygılar sunarız.</P>
-<P class="p7 ft10">Öğrencinin Bilgileri</P>
+<P class="p6 ft8">Bölümü öğrencisi … <?php echo @$_POST["sure"]; ?> . gün süre ile kurumunuzda/işyerinizde staj yapma talebinde bulunmuştur. 5510 sayılı Kanun gereğince 
+<SPAN class="ft9">sigorta işlemleri (kısa vadeli sigorta kolları primi ile genel sağlık sigortası primi ödemeleri) Üniversitemiz tarafından yapılacak olup</SPAN>, 
+aşağıda kimlik bilgileri verilen öğrencimizin stajını kuruluşunuzda/işyerinizde yapmasında göstereceğiniz ilgiye teşekkür eder, saygılar sunarız.</P>
+
 <TABLE cellpadding=0 cellspacing=0 class="t1">
+<TR>
+	<TD class="tr9 td0" colspan="10"><P class="p7 ft10">Öğrencinin Bilgileri</P></TD>
+</TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td5" ><P class="p8 ft11">Adı Soyadı</P></TD>
@@ -313,7 +318,6 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Veriliş Nedeni</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
 	<TD class="tr13 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["neden"]; ?></P></TD>
-	 
 </TR>
 <TR>
 	<TD class="tr6 td0"></TD>
@@ -359,7 +363,6 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Web Adresi</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
 	<TD class="tr13 td21"   colspan="2"><P class="p1 ft8"><?php echo @$_POST["web"]; ?></P></TD>
-	< 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
