@@ -28,6 +28,7 @@
 <script src="dist/js/app.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="dist/js/demo.js"></script>
+<script src="js/ajax.js"></script>
 <script>
   $(function () {
     $("#compose-textarea").wysihtml5();

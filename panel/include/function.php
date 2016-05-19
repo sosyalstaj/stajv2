@@ -74,7 +74,10 @@
 
 	function islemler()
 	{
-
+		if(@$_POST["profilduzenle"])
+		{
+			return profilGuncelle();
+		}
 	}
 	function il_listele()
 	{
@@ -99,6 +102,104 @@
 			while ($row = mysqli_fetch_array($sonuc)) {
 				echo "<option value=".$row['id'].">".$row['ilce']."</option>";
 			}
+		}
+	}
+
+	function optionListele($sonuc ,$id,$value,$text)
+	{
+		if($sonuc)
+		{
+			while($row=mysqli_fetch_array($sonuc))
+			{
+				if($row["$value"]== $id)
+				{
+					echo "<option selected='selected' value='".$row["$value"]."'>".$row["$text"]."</option>";
+				}
+				else
+				{
+					echo "<option value='".$row["$value"]."'>".$row["$text"]."</option>";
+				}
+			}
+		}
+	}
+
+	function fakulteListele($uni_id)
+	{
+		global $conn;
+		$query ="SELECT id, fakulte_adi FROM tbl_fakulte WHERE uni_id =$uni_id";
+		$sonuc =mysqli_query($conn,$query);
+		if($sonuc)
+		{
+			echo "<option value='-1'>Fakülte Seç</option>";
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['fakulte_adi']."</option>";
+			}
+		}
+	}
+
+	function bolumListele($fakulte)
+	{
+		global $conn;
+		$query ="select id,bolum_adi from tbl_bolum where fakulte_id = $fakulte";
+		$sonuc =mysqli_query($conn,$query);
+		if($sonuc)
+		{
+			echo "<option value='-1'>Bölüm Seç</option>";
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['bolum_adi']."</option>";
+			}
+		}
+	}
+
+	function profilGuncelle()
+	{
+		$id =$_SESSION["staj"]["id"];
+
+		$mail=temizle(@$_POST["mail"]);
+		$parola=temizle(@$_POST["parola"]);
+		$adi=temizle(@$_POST["ad"]);
+		$soyadi=temizle(@$_POST["soyad"]);
+		$cinsiyet=temizle(@$_POST["cinsiyet"]);
+		$uni=temizle(@$_POST["uni"]);
+		$fakulte=temizle(@$_POST["fakulte"]);
+		$bolum=temizle(@$_POST["bolum"]);
+		$sinif=temizle(@$_POST["sinif"]);
+		$okul_no=temizle(@$_POST["okul_no"]);
+		$il=temizle(@$_POST["il"]);
+		$ilce=temizle(@$_POST["ilce"]);
+		$adres=temizle(@$_POST["adres"]);
+
+		global $conn;
+		$msg ="";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
+		if($_FILES["foto"]["name"] != "")
+		{
+			if (move_uploaded_file($_FILES['foto']['tmp_name'], $yuklenecek_dosya))
+			{
+			    $query .=",foto='$yuklenecek_dosya' ";
+			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+			}else
+			{
+				$msg =errorMesaj("Foto yüklenemedi");
+			}
+		}
+		if($parola !="")
+		{
+			$parola =md5($parola);
+			$query .=" , parola='$parola'";
+		}
+		$query .=" where id =$id ; ";
+		$query2 ="update tbl_ogrenci SET cinsiyet =$cinsiyet,il=$il,ilce =$ilce 
+			,adres='$adres', uni =$uni , fakulte=$fakulte ,bolum =$bolum ,
+			 sinif =$sinif,okul_no ='$okul_no' where user_id=$id";
+		
+		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
+		{
+			return $msg.successMesaj("Kayı işlemi başarılı");
+		}else
+		{
+			return $msg.errorMesaj("Kayıt işlemi tamamlanamadı");
 		}
 	}
 ?>
