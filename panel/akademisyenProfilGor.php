@@ -21,29 +21,10 @@
 					$iletisim["facebook"]="Girilmemis";
 					$iletisim["github"]="Girilmemis";
 					$iletisim["gmail"]="Girilmemis";
-					$iletisim["tel"]="Girilmemis";
-				
-				}
-				
-				
-				
-				
+					$iletisim["tel"]="Girilmemis";		
+				}		
 
 		}
-		$query1="SELECT*FROM tbl_hakkimizda where user_id=$id";//".$_SESSION["staj"]->getId();
-		$sonuc1 =mysqli_query($conn,$query1);
-		if(@mysqli_num_rows($sonuc1) ==1)
-		{
-			$hakkinda=mysqli_fetch_array($sonuc1);
-			
-		}
-		else{
-			$hakkinda["baslik"]="girilmemis";
-			$hakkinda["icerik"]="girilmemis";
-			$hakkinda["tarih"]="girilmemis";
-		}
-	
-
 ?>
 
 			  

@@ -42,7 +42,7 @@
 		
 								
                   	<div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Ýl</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">İl</label>
 
                   <div class="col-sm-10">
                     <select name="il" id="il" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
@@ -55,7 +55,7 @@
                   </div>
                 </div>
 			     	<div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Ýlçe</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">İlçe</label>
 
                   <div class="col-sm-10">
                     <select name="ilce" id ="ilce" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
@@ -77,7 +77,7 @@
                   </div>
                 </div>
 				  <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Açýklama</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label">Açıklama</label>
 
                   <div class="col-sm-10">
                     <input type="text"name="aciklama" class="form-control" id="inputPassword3" placeholder="Adres"value="<?php echo $kisi["aciklama"]; ?>"/>

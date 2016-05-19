@@ -1,7 +1,7 @@
 <?php
 	$id =$_SESSION["staj"]["id"];
 	global $conn;
-	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.rol,A.unvan,A.tc,A.uni_id from 
+	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.hakkimda,K.rol,A.unvan,A.tc,A.uni_id from 
 			tbl_kullanici as K INNER JOIN tbl_akademisyen as A on K.id = A.user_id WHERE K.id =".$id;
 			
 	$kisi_sonuc=mysqli_query($conn,$query_profil);
@@ -46,11 +46,11 @@
                 </div>
 				
 				<div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Üniversite</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Ãœniversite</label>
 
                   <div class="col-sm-10">
                     <select name="uni" id="uni" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-  					       <option value="-1">Ünüversite Seç</option>
+  					       <option value="-1">ÃœnÃ¼versite SeÃ§</option>
 					<?php
     						$query_uni ="Select id ,uni_adi from tbl_uni";
     						$uni_sonuc =mysqli_query($conn,$query_uni);
@@ -60,10 +60,17 @@
                   </div>
                 </div>
       
+              <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">HakkÄ±mda</label>
+
+                  <div class="col-sm-10">
+                    <textarea name="hakkimda"  class="form-control" rows="4"><?php echo $kisi["hakkimda"]; ?></textarea>
+                  </div>
+                </div>
               
               <div class="box-footer">
                 
-                <input type="submit" name="akademisyenProfilDuzenle" class="btn btn-info pull-right"value="Güncelle"/>
+                <input type="submit" name="akademisyenProfilDuzenle" class="btn btn-info pull-right"value="GÃ¼ncelle"/>
               </div>
               <!-- /.box-footer -->
             </form>
