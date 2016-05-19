@@ -12,8 +12,8 @@
        <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>ÖĞRENCİ İŞLEM</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="index.php?sayfa=ogrenci-goster">Onay Bekleyen</a></li>
-            <li><a href="index.php?sayfa=ogrenci-listem">Öğrenci Listesi</a></li>
+            <li><a href="index.php?sayfa=kariyer-goster">Onay Bekleyen</a></li>
+            <li><a href="index.php?sayfa=kariyer-duzenle">Öğrenci Listesi</a></li>
           </ul>
         </li>
 		<li class="treeview">
@@ -31,7 +31,7 @@
           </ul>
         </li>
 					<li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Staj Eşleşmeleri</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>STAJ EŞLEŞMELERİ</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="index.php?sayfa=staj_sonuclananlar">Sonuçlananlar</a></li>
             <li><a href="index.php?sayfa=staj_beklenenler">Bekleyenler</a></li>
