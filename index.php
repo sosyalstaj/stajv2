@@ -3,7 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title> </title>
+    <title>Sosyal Staj</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Login -->
     	<?php if(@$_GET["sayfa"] !="" || @$_GET["search"] !="")
     	{
