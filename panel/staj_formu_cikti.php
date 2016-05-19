@@ -26,7 +26,7 @@ body {margin-top: 0px;margin-left: 0px;}
 .ft5{font: bold 14px 'Times New Roman';line-height: 16px;}
 .ft6{font: 1px 'Times New Roman';line-height: 14px;}
 .ft7{font: 1px 'Times New Roman';line-height: 13px;}
-.ft8{font: 16px 'Times New Roman';line-height: 18px;}
+.ft8{font: 16px 'Times New Roman';line-height: 15px;}
 .ft9{font: bold 16px 'Times New Roman';line-height: 19px;}
 .ft10{font: bold 15px 'Times New Roman';line-height: 16px;}
 .ft11{font: 15px 'Times New Roman';line-height: 16px;}
@@ -233,88 +233,76 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">T.C. Kimlik No</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td17" colspan="3"><P class="p1 ft8"><?php echo @$_POST["tc"]; ?></P></TD>
+	 
 	<TD colspan=3 class="tr9 td36"><P class="p10 ft11">Nüfusa Kayıtlı Olduğu İl</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["sehir"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
 	<TD class="tr13 td14"><P class="p9 ft11">N.Cüzdan Seri No</P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td17" colspan="3"><P class="p1 8"><?php echo @$_POST["seri"]; ?></P></TD>
+	 
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">İlçe</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21" colspan="2"> <P class="p1 ft8"><?php echo @$_POST["ilce"]; ?></P> </TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Adı</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td17" colspan="3"><P class="p1 ft8"><?php echo @$_POST["adim"]; ?></P></TD>
+	 
 	<TD colspan=2 class="tr9 td18"><P class="p10 ft11">Mahalle- Köy</P></TD>
 	<TD class="tr9 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["mahalle"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
-	<TD class="tr13 td14"><P class="p9 ft11">Soyadı</P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td17"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Cilt No</P></TD>
+	<TD class="tr13 td14"><P class="p9 ft11">Soyadı</P></TD>	 
+	<TD class="tr13 td17"  colspan="3"><P class="p1 ft8"><?php echo @$_POST["soyad"]; ?></P></TD>
+ 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Cilt No</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21"  colspan="2" ><P class="p1 ft8"><?php echo @$_POST["cilt"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Baba Adı</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD colspan=2 class="tr9 td18"><P class="p10 ft11">Aile Sıra No</P></TD>
+	<TD class="tr9 td17" colspan="3" ><P class="p1 ft8"><?php echo @$_POST["baba"]; ?></TD>
+ 	<TD colspan=2 class="tr9 td18"><P class="p10 ft11">Aile Sıra No</P></TD>
 	<TD class="tr9 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
-</TR>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"  ><?php echo @$_POST["aile"]; ?></P></TD>
+ </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
 	<TD class="tr13 td14"><P class="p9 ft11">Ana Adı</P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td17" colspan="3"><P class="p1 ft8"><?php echo @$_POST["anne"]; ?></P></TD> 
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Sıra No</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21"  colspan="2"><P class="p1 ft8"><?php echo @$_POST["sira"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft13">Doğum Yeri</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td17"  colspan="3" ><P class="p1 ft8"><?php echo @$_POST["dogumYeri"]; ?></P></TD>
+	 
 	<TD colspan=3 class="tr9 td36"><P class="p10 ft13">Verildiği Nüfus Dairesi</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["nufus"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Doğum Tarihi</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td17" colspan="3" ><P class="p1 ft8"><?php echo @$_POST["dogumYil"]; ?></P></TD>
+	 
 	<TD colspan=2 class="tr9 td18"><P class="p10 ft11">Veriliş Tarihi</P></TD>
-	<TD class="tr9 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td19"  ><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["verilisTarihi"]; ?></P></TD>
+ 
 </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
@@ -324,8 +312,8 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr13 td17"><P class="p1 ft1">&nbsp;</P></TD>
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Veriliş Nedeni</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["neden"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr6 td0"></TD>
@@ -341,71 +329,46 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr13 td0"></TD>
 	<TD class="tr13 td14"><P class="p9 ft11">Kurumun/Kuruluşun Adı</P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td31"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td32"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td33"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td34"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21" colspan="8" ><P class="p1 ft8"><?php echo @$_POST["kurumAdi"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Adresi</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td31"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td32"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td33"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td34"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td15" colspan="8"><P class="p1 ft8"><?php echo @$_POST["kurumAdres"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
 	<TD class="tr13 td14"><P class="p9 ft11">Üretim/Hizmet Alanı</P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td31"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td32"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td33"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td34"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21" colspan="8"><P class="p1 ft8"><?php echo @$_POST["alan"]; ?></P></TD>
+	 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Telefon No</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td17"  colspan="3"><P class="p1 ft8"><?php echo @$_POST["isyeriTelefon"]; ?></P></TD>
 	<TD colspan=2 class="tr9 td18"><P class="p10 ft11">Faks No</P></TD>
 	<TD class="tr9 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21"  colspan="2"><P class="p1 ft8"><?php echo @$_POST["fax"]; ?></P></TD>
 </TR>
 <TR>
 	<TD class="tr13 td0"></TD>
 	<TD class="tr13 td14"><P class="p9 ft11"><NOBR>e-posta</NOBR></P></TD>
-	<TD class="tr13 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td16"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td17"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td17"  colspan="3"><P class="p1 ft8"><?php echo @$_POST["kurumEmail"]; ?></P></TD>	
 	<TD colspan=2 class="tr13 td18"><P class="p10 ft11">Web Adresi</P></TD>
 	<TD class="tr13 td19"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td20"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr13 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr13 td21"   colspan="2"><P class="p1 ft8"><?php echo @$_POST["web"]; ?></P></TD>
+	< 
 </TR>
 <TR>
 	<TD class="tr9 td0"></TD>
 	<TD class="tr9 td14"><P class="p9 ft11">Staja Başlama Tarihi</P></TD>
-	<TD class="tr9 td15"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td38"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td38" colspan="2"><P class="p1 ft8"><?php echo @$_POST["baslamaTarih"]; ?></P></TD> 
 	<TD colspan=2 class="tr9 td39"><P class="p12 ft11">Bitiş Tarihi</P></TD>
-	<TD class="tr9 td33"><P class="p1 ft1">&nbsp;</P></TD>
-	<TD class="tr9 td19"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td19" colspan="2"><P class="p1 ft8"><?php echo @$_POST["bitisTarihi"]; ?></P></TD> 
 	<TD class="tr9 td40"><P class="p10 ft11">Süresi (gün)</P></TD>
-	<TD class="tr9 td21"><P class="p1 ft1">&nbsp;</P></TD>
+	<TD class="tr9 td21"><P class="p1 ft8"><?php echo @$_POST["sure"]; ?></P></TD>
 </TR>
 <TR>
 	<TD class="tr12 td0"></TD>
