@@ -20,7 +20,7 @@ if(@$_POST["basvur"]){
 	$tarih=date("j-n-o");
 	echo $tarih;
 
-$sorgu2="INSERT INTO `tbl_basvuru`(`isyeri_id`, `ogrenci_id`, `tarih`, `onsoz`, `aciklama`) VALUES (".$isyeri_id.",".$ogrenci_id.",'".$tarih."','".$onsoz."','".$aciklama."')";
+$sorgu2="INSERT INTO `tbl_basvuru`(`isyeri_id`, `ogrenci_id`, `tarih`, `onsoz`, `aciklama`,anlasma) VALUES (".$isyeri_id.",".$ogrenci_id.",'".$tarih."','".$onsoz."','".$aciklama."',-1)";
 echo $sorgu2;
 	if($sonuc2=mysqli_query($conn,$sorgu2))
 	{	
