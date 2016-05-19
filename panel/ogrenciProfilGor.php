@@ -24,26 +24,8 @@
 					$iletisim["tel"]="Girilmemis";
 				
 				}
-				
-				
-				
-				
 
 		}
-		$query1="SELECT*FROM tbl_hakkimizda where user_id=$id";//".$_SESSION["staj"]->getId();
-		$sonuc1 =mysqli_query($conn,$query1);
-		if(@mysqli_num_rows($sonuc1) ==1)
-		{
-			$hakkinda=mysqli_fetch_array($sonuc1);
-			
-		}
-		else{
-			$hakkinda["baslik"]="girilmemis";
-			$hakkinda["icerik"]="girilmemis";
-			$hakkinda["tarih"]="girilmemis";
-		}
-	
-
 ?>
 
 			  
@@ -79,10 +61,10 @@
                 <li>
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> <?php echo $hakkinda["tarih"]; ?></span>
-                    <h3 class="timeline-header"><a href="#">HAKKINDA <?php // echo $hakkinda["baslik"]; ?></h3>
+                    <span class="time"><i class="fa fa-clock-o"></i></span>
+                    <h3 class="timeline-header"><a href="#">HAKKINDA </h3>
                     <div class="timeline-body" style="padding-left:10px;">
-                      <?php echo $hakkinda["icerik"]; ?>
+                      <?php echo $kullanici["hakkimda"]; ?>
                     </div>
                     <div class="timeline-footer">
                       <a href="index.php?sayfa=profil-duzenle" class="btn btn-primary btn-xs">Duzenle</a>
