@@ -1,0 +1,106 @@
+body {
+    background-color: #f9f6f1;
+    margin: 0px;
+}
+
+
+#content-login {
+    width: 420px;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding-top: 15px;
+    background-color: #FFFFFF;
+    min-height: 310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content-login div {
+    width: 340px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content-login div .giris {
+    width: 100%;
+   /*height: 25px;*/
+    border: 1px solid #466;
+    border-radius: 3px;
+    font-size: 15px;
+    /*padding:3px;*/
+    padding: 5px 5px;
+}
+#content-login div #hatirla {
+    float: left;
+    font-size: 14px;
+}
+#content-login div #btngiris {
+    width: 100px;
+    /*height: 30px;*/
+    padding: 5px 5px;
+    float: right;
+    font-size: 14px;
+    background-color: #21a9ec;
+    border-radius: 2px;
+    border: 1px solid #456;
+}
+#content{
+    margin-bottom: 100px;
+}
+#copyright {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#kayitOl{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 70px;
+    border-radius: 8px;
+}
+
+#kayitOl .content-input{
+    min-height: 40px;
+}
+
+#kayitOl .content-input{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#kayitOl .content-input label{
+    width: 130px;
+    height: 35px;
+    line-height:35px;
+}
+#kayitOl .content-input label,#kayitOl .content-input label div input
+{
+    float: left;
+}
+
+#kayitOl div .form-control,#kayitOl .orta div .form-control{
+    width: 45%;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.content-input textarea
+{
+    width: 70%;
+    max-width: 70%;
+    height: 50px;
+}
+#kayitOl div input{
+    width: 60%;
+    padding: 3px;
+}
+#kaydet{
+    margin-left:140px; 
+}
+#dvicerik div h3,#dvicerik div p{
+    text-align: left;
+}
