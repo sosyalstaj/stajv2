@@ -221,11 +221,11 @@
 		$il=temizle(@$_POST["il"]);
 		$ilce=temizle(@$_POST["ilce"]);
 		$adres=temizle(@$_POST["adres"]);
-		$hakkinda=temizle(@$_POST["hakkinda"]);
+		$hakkimda=temizle(@$_POST["hakkimda"]);
 
 		global $conn;
 		$msg ="";
-		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail',hakkinda='$hakkinda' ";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail',hakkimda='$hakkimda' ";
 		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
 		if($_FILES["foto"]["name"] != "")
 		{
@@ -303,7 +303,8 @@
 			return $msg.errorMesaj("Güncelleme işlemi tamamlanamadı");
 		}
 	}
-		function AkademisyenprofilGuncelle()
+	
+	function AkademisyenprofilGuncelle()
 	{
 		$id =$_SESSION["staj"]["id"];
 
@@ -333,8 +334,8 @@
 			$parola =md5($parola);
 			$query .=" , parola='$parola'";
 		}
-		$query .=" where id =$id ; ";
-		$query2 ="update tbl_akademisyen SET  uni=$uni  where user_id=$id";
+		$query .=" where id =$id";
+		$query2 ="update tbl_akademisyen SET uni_id =$uni where user_id =$id";
 		
 		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
 		{
