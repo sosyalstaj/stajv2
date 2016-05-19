@@ -49,6 +49,9 @@
 		else if($sayfa=="mesajlar"){
 			require_once("brojem.php");
 		}
+		else if($sayfa=="iletisim"){
+			require_once("iletisim.php");
+		}
 	}
 
 	function islemler()
