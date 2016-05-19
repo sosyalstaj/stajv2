@@ -34,7 +34,7 @@
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
 					
-				$anlasma="Başvurunuz bekleniyor";
+				$anlasma="Başvuru bekleniyor";
 				$query2 = "select * from tbl_kullanici where id=".$row["isyeri_id"];
 				$sonuc2 = mysqli_query($conn,$query2);
 				while ($row2 = mysqli_fetch_array($sonuc2)) {

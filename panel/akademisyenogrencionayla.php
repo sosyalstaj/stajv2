@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 $id=$_SESSION["staj"]["id"];
 if(@$_POST["onay"]){
 	$gelen=$_POST["anid"];
@@ -35,7 +35,7 @@ else if (@$_POST){
 <div class="col-md-6" style="width:100%;">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Öðrenci Onayla</h3>
+                  <h3 class="box-title">Ã–ÄŸrenci Onayla</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">

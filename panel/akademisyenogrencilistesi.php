@@ -14,8 +14,8 @@ $id=$_SESSION["staj"]["id"];
                   <table class="table table-bordered">
                     <tbody><tr>
                       <th style="width: 10px">#</th>
-                      <th>Adi</th>
-                      <th>Soyadi</th>
+                      <th>Adı</th>
+                      <th>Soyadı</th>
                       <th style="width: 100px">Okul No</th>
                     </tr>
 
@@ -47,12 +47,14 @@ $id=$_SESSION["staj"]["id"];
 		
                     
                     <tr>
+						
                       <td><?php echo $k; ?></td>
+					  <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row["user_id"]; ?>"><?php echo $row["okul_no"]; ?></a></td>
                       <td><?php echo $row2["adi"]; ?></td>
                       <td>
                        <?php echo $row2["soyadi"]; ?>
                       </td>
-                      <td><?php echo $row["okul_no"]; ?></td>
+                      
 					
 		
                     </tr>
