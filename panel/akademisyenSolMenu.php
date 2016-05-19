@@ -1,4 +1,4 @@
-<ul class="sidebar-menu">
+﻿<ul class="sidebar-menu">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
          <li class="treeview">
@@ -10,10 +10,10 @@
         </li>
         <li><a href="index.php?sayfa=mesajlar"><i class="fa fa-link"></i> <span>MESAJLAR</span></a></li>
        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>KARİYER</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>ÖĞRENCİ İŞLEM</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="index.php?sayfa=kariyer-goster">Göster</a></li>
-            <li><a href="index.php?sayfa=kariyer-duzenle">Düzenle</a></li>
+            <li><a href="index.php?sayfa=kariyer-goster">Onay Bekleyen</a></li>
+            <li><a href="index.php?sayfa=kariyer-duzenle">Öğrenci Listesi</a></li>
           </ul>
         </li>
 		<li class="treeview">
