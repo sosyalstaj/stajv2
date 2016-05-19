@@ -36,7 +36,7 @@
 			}else if($_SESSION["staj"]["rol"] == 2){
 				 require_once("akademisyenProfilDuzenle.php");
 			}else if($_SESSION["staj"]["rol"] == 3){
-				require_once("isverenProfilDuzenle.php");
+				require_once("isyeriProfilDuzenle.php");
 			} 
            
 		}
@@ -45,7 +45,7 @@
 		}
 		else if($sayfa=="profil-goster"){
 			if($_SESSION["staj"]["rol"] == 1){
-				 require_once("ogrProfilGor.php");
+				 require_once("ogrenciProfilGor.php");
 			}else if($_SESSION["staj"]["rol"] == 2){
 				 require_once("akademisyenProfilGor.php");
 			}else if($_SESSION["staj"]["rol"] == 3){
@@ -76,9 +76,6 @@
 		else if($sayfa=="hakkinda"){
 			require_once("hakkinda.php");
 		}
-		else if($sayfa=="staj_eslesmeleri"){
-			require_once("akademisyen_staj_gor.php");
-		}
 	}
 
 	function islemler()
@@ -86,6 +83,14 @@
 		if(@$_POST["profilduzenle"])
 		{
 			return profilGuncelle();
+		}
+		else if(@$_POST["akademisyenProfilDuzenle"])
+		{
+			return AkademisyenprofilGuncelle();
+		}
+		else if(@$_POST["isyeriGuncelle"])
+		{
+			return isyeriprofilGuncelle();
 		}
 	}
 	function il_listele()
@@ -160,21 +165,6 @@
 		}
 	}
 
-	function akademisyenListele($uni_id)
-	{
-		global $conn;
-		$query ="SELECT K.adi,K.soyadi,K.id FROM tbl_akademisyen as UID 
-		INNER JOIN tbl_kullanici as K on UID.user_id = K.id WHERE UID.uni_id = $uni_id";
-		$sonuc =mysqli_query($conn,$query);
-		if($sonuc)
-		{
-			echo "<option value='-1'>Akademisyen Seç</option>";
-			while ($row = mysqli_fetch_array($sonuc)) {
-				echo "<option value=".$row['id'].">".$row['adi']." ".$row['soyadi']."</option>";
-			}
-		}
-	}
-
 	function profilGuncelle()
 	{
 		$id =$_SESSION["staj"]["id"];
@@ -192,7 +182,6 @@
 		$il=temizle(@$_POST["il"]);
 		$ilce=temizle(@$_POST["ilce"]);
 		$adres=temizle(@$_POST["adres"]);
-		$aka=temizle(@$_POST["akademisyen"]);
 
 		global $conn;
 		$msg ="";
@@ -217,7 +206,7 @@
 		$query .=" where id =$id ; ";
 		$query2 ="update tbl_ogrenci SET cinsiyet =$cinsiyet,il=$il,ilce =$ilce 
 			,adres='$adres', uni =$uni , fakulte=$fakulte ,bolum =$bolum ,
-			 sinif =$sinif,okul_no ='$okul_no' ,aka_id=$aka where user_id=$id";
+			 sinif =$sinif,okul_no ='$okul_no' where user_id=$id";
 		
 		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
 		{
@@ -227,4 +216,177 @@
 			return $msg.errorMesaj("Kayıt işlemi tamamlanamadı");
 		}
 	}
+	
+	
+	function isyeriprofilGuncelle()
+	{
+		$id =$_SESSION["staj"]["id"];
+
+		$mail=temizle(@$_POST["mail"]);
+		$parola=temizle(@$_POST["parola"]);
+		$adi=temizle(@$_POST["ad"]);
+		$soyadi=temizle(@$_POST["soyad"]);
+		$adres=temizle(@$_POST["adres"]);
+		$aciklama=temizle(@$_POST["aciklama"]);
+		$il=temizle(@$_POST["il"]);
+		$ilce=temizle(@$_POST["ilce"]);
+		global $conn;
+		$msg ="";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
+		if($_FILES["foto"]["name"] != "")
+		{
+			if (move_uploaded_file($_FILES['foto']['tmp_name'], $yuklenecek_dosya))
+			{
+			    $query .=",foto='$yuklenecek_dosya' ";
+			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+			}else
+			{
+				$msg =errorMesaj("Foto yüklenemedi");
+			}
+		}
+		if($parola !="")
+		{
+			$parola =md5($parola);
+			$query .=" , parola='$parola'";
+		}
+		$query .=" where id =$id ; ";
+		$query2 ="update tbl_isyeri SET il=$il,ilce =$ilce 
+			,adres='$adres', aciklama ='$aciklama'  where user_id=$id";
+		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
+		{
+			return $msg.successMesaj("Güncelleme işlemi başarılı");
+		}else
+		{
+			return $msg.errorMesaj("Güncelleme işlemi tamamlanamadı");
+		}
+	}
+		function AkademisyenprofilGuncelle()
+	{
+		$id =$_SESSION["staj"]["id"];
+
+		$mail=temizle(@$_POST["mail"]);
+		$parola=temizle(@$_POST["parola"]);
+		$adi=temizle(@$_POST["ad"]);
+		$soyadi=temizle(@$_POST["soyad"]);
+		$uni=temizle(@$_POST["uni"]);
+	
+		global $conn;
+		$msg ="";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
+		if($_FILES["foto"]["name"] != "")
+		{
+			if (move_uploaded_file($_FILES['foto']['tmp_name'], $yuklenecek_dosya))
+			{
+			    $query .=",foto='$yuklenecek_dosya' ";
+			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+			}else
+			{
+				$msg =errorMesaj("Foto yüklenemedi");
+			}
+		}
+		if($parola !="")
+		{
+			$parola =md5($parola);
+			$query .=" , parola='$parola'";
+		}
+		$query .=" where id =$id ; ";
+		$query2 ="update tbl_akademisyen SET  uni=$uni  where user_id=$id";
+		
+		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
+		{
+			return $msg.successMesaj("Güncelleme işlemi başarılı");
+		}else
+		{
+			return $msg.errorMesaj("Güncelleme işlemi tamamlanamadı");
+		}
+	}
+	function isyeriprofilGuncelle()
+	{
+		$id =$_SESSION["staj"]["id"];
+
+		$mail=temizle(@$_POST["mail"]);
+		$parola=temizle(@$_POST["parola"]);
+		$adi=temizle(@$_POST["ad"]);
+		$soyadi=temizle(@$_POST["soyad"]);
+		$adres=temizle(@$_POST["adres"]);
+		$aciklama=temizle(@$_POST["aciklama"]);
+		$il=temizle(@$_POST["il"]);
+		$ilce=temizle(@$_POST["ilce"]);
+		global $conn;
+		$msg ="";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
+		if($_FILES["foto"]["name"] != "")
+		{
+			if (move_uploaded_file($_FILES['foto']['tmp_name'], $yuklenecek_dosya))
+			{
+			    $query .=",foto='$yuklenecek_dosya' ";
+			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+			}else
+			{
+				$msg =errorMesaj("Foto yüklenemedi");
+			}
+		}
+		if($parola !="")
+		{
+			$parola =md5($parola);
+			$query .=" , parola='$parola'";
+		}
+		$query .=" where id =$id ; ";
+		$query2 ="update tbl_isyeri SET il=$il,ilce =$ilce 
+			,adres='$adres', aciklama ='$aciklama'  where user_id=$id";
+		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
+		{
+			return $msg.successMesaj("Güncelleme işlemi başarılı");
+		}else
+		{
+			return $msg.errorMesaj("Güncelleme işlemi tamamlanamadı");
+		}
+	}
+		function AkademisyenprofilGuncelle()
+	{
+		$id =$_SESSION["staj"]["id"];
+
+		$mail=temizle(@$_POST["mail"]);
+		$parola=temizle(@$_POST["parola"]);
+		$adi=temizle(@$_POST["ad"]);
+		$soyadi=temizle(@$_POST["soyad"]);
+		$uni=temizle(@$_POST["uni"]);
+	
+		global $conn;
+		$msg ="";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
+		if($_FILES["foto"]["name"] != "")
+		{
+			if (move_uploaded_file($_FILES['foto']['tmp_name'], $yuklenecek_dosya))
+			{
+			    $query .=",foto='$yuklenecek_dosya' ";
+			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+			}else
+			{
+				$msg =errorMesaj("Foto yüklenemedi");
+			}
+		}
+		if($parola !="")
+		{
+			$parola =md5($parola);
+			$query .=" , parola='$parola'";
+		}
+		$query .=" where id =$id ; ";
+		$query2 ="update tbl_akademisyen SET  uni=$uni  where user_id=$id";
+		
+		if(mysqli_query($conn,$query) && mysqli_query($conn,$query2))
+		{
+			return $msg.successMesaj("Güncelleme işlemi başarılı");
+		}else
+		{
+			return $msg.errorMesaj("Güncelleme işlemi tamamlanamadı");
+		}
+	}
+	
+?>
+	
 ?>
