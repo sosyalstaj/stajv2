@@ -1,6 +1,5 @@
- <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2015 <a href="#">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+﻿ <footer class="main-footer">
+    <strong>Copyright &copy; 2016 <a href="#">Sosyal Staj</a>.</strong> Tüm hakları saklıdır.
   </footer>
 
  
