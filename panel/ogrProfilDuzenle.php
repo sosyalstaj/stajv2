@@ -5,15 +5,16 @@ if(!$conn){
 }
 else{
 	
-	$sorgu="select * from tbl_ogrenci where user_id=1"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu2="select * from tbl_kullanici where id=1"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu3="select * from tbl_uni inner join tbl_ogrenci on tbl_uni.id=tbl_ogrenci.uni where tbl_ogrenci.user_id=1"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu="select * from tbl_ogrenci where user_id=".$_SESSION["staj"]["id"];
+	echo $_SESSION["staj"]["id"];
+	$sorgu2="select * from tbl_kullanici where id=".$_SESSION["staj"]["id"];
+	$sorgu3="select * from tbl_uni inner join tbl_ogrenci on tbl_uni.id=tbl_ogrenci.uni where tbl_ogrenci.user_id=".$_SESSION["staj"]["id"];
 	$sorgu4="select * from tbl_uni";
-	$sorgu5="select * from tbl_fakulte inner join tbl_ogrenci on tbl_fakulte.id=tbl_ogrenci.uni where tbl_ogrenci.user_id=1"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu7="select * from tbl_bolum inner join tbl_ogrenci on tbl_bolum.id=tbl_ogrenci.fakulte where tbl_ogrenci.user_id=1"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu9="select * from tbl_il inner join tbl_ogrenci on tbl_il.id=tbl_ogrenci.il where tbl_ogrenci.user_id=1"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu5="select * from tbl_fakulte inner join tbl_ogrenci on tbl_fakulte.id=tbl_ogrenci.uni where tbl_ogrenci.user_id=".$_SESSION["staj"]["id"];
+	$sorgu7="select * from tbl_bolum inner join tbl_ogrenci on tbl_bolum.id=tbl_ogrenci.fakulte where tbl_ogrenci.user_id=".$_SESSION["staj"]["id"];
+	$sorgu9="select * from tbl_il inner join tbl_ogrenci on tbl_il.id=tbl_ogrenci.il where tbl_ogrenci.user_id=".$_SESSION["staj"]["id"];
 	$sorgu10="select * from tbl_il";
-	$sorgu11="select * from tbl_ilce inner join tbl_ogrenci on tbl_ilce.id=tbl_ogrenci.ilce where tbl_ogrenci.user_id=1"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu11="select * from tbl_ilce inner join tbl_ogrenci on tbl_ilce.id=tbl_ogrenci.ilce where tbl_ogrenci.user_id=".$_SESSION["staj"]["id"];
 	
 	if($sonuc=mysqli_query($conn,$sorgu))
 	{	
@@ -72,14 +73,14 @@ if(@$_POST["duzenle"]){
 if(!$conn){
 	echo "veritabani bağlanti hatasi";
 }else{
-	$sorgu="Update tbl_ogrenci SET adres=\"".$adres."\",okul_no=\"".$okul_no."\",sinif=".$sinif." , cinsiyet=".$cinsiyet." where user_id=1"/*.$_SESSION["staj"]->getID().""*/;
-	$sorgu2="Update tbl_kullanici SET adi=\"".$adi."\" , soyadi=\"".$soyadi."\" , mail=\"".$mail."\" , parola=\"".MD5($parola)."\" , foto=\"".$foto."\" where id=1"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu="Update tbl_ogrenci SET adres=\"".$adres."\",okul_no=\"".$okul_no."\",sinif=".$sinif." , cinsiyet=".$cinsiyet." where user_id=".$_SESSION["staj"]["id"];
+	$sorgu2="Update tbl_kullanici SET adi=\"".$adi."\" , soyadi=\"".$soyadi."\" , mail=\"".$mail."\" , parola=\"".MD5($parola)."\" , foto=\"".$foto."\" where id=".$_SESSION["staj"]["id"];
 	$sorgu4="select * from tbl_uni where uni_adi='".$uni."'";
 	if($sonuc4=mysqli_query($conn,$sorgu4))
 	{	
 		$array4=mysqli_fetch_array($sonuc4);
 	}
-	$sorgu3="Update tbl_ogrenci SET uni=".$array4["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu3="Update tbl_ogrenci SET uni=".$array4["id"]." where user_id=".$_SESSION["staj"]["id"];
 	
 	
 		$sorgu5="select * from tbl_fakulte where fakulte_adi='".$fakulte."'";
@@ -87,28 +88,28 @@ if(!$conn){
 	{	
 		$array5=mysqli_fetch_array($sonuc5);
 	}
-	$sorgu6="Update tbl_ogrenci SET fakulte=".$array5["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu6="Update tbl_ogrenci SET fakulte=".$array5["id"]." where user_id=".$_SESSION["staj"]["id"];
 	
 		$sorgu7="select * from tbl_bolum where bolum_adi='".$fakulte."'";
 	if($sonuc7=mysqli_query($conn,$sorgu7))
 	{	
 		$array7=mysqli_fetch_array($sonuc7);
 	}
-	$sorgu8="Update tbl_ogrenci SET bolum=".$array7["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu8="Update tbl_ogrenci SET bolum=".$array7["id"]." where user_id=".$_SESSION["staj"]["id"];
 	
 			$sorgu9="select * from tbl_il where il='".$fakulte."'";
 	if($sonuc9=mysqli_query($conn,$sorgu9))
 	{	
 		$array9=mysqli_fetch_array($sonuc9);
 	}
-	$sorgu10="Update tbl_ogrenci SET il=".$array9["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu10="Update tbl_ogrenci SET il=".$array9["id"]." where user_id=".$_SESSION["staj"]["id"];
 	
 		$sorgu11="select * from tbl_ilce where ilce='".$fakulte."'";
 	if($sonuc11=mysqli_query($conn,$sorgu11))
 	{	
 		$array11=mysqli_fetch_array($sonuc11);
 	}
-	$sorgu12="Update tbl_ogrenci SET bolum=".$array11["id"]." where user_id=2"/*.$_SESSION["staj"]->getID().""*/;
+	$sorgu12="Update tbl_ogrenci SET bolum=".$array11["id"]." where user_id=".$_SESSION["staj"]["id"];
 	
 	
 		if(mysqli_query($conn,$sorgu)&&mysqli_query($conn,$sorgu2)&&mysqli_query($conn,$sorgu3)&&mysqli_query($conn,$sorgu6)&&mysqli_query($conn,$sorgu8)&&mysqli_query($conn,$sorgu10)&&mysqli_query($conn,$sorgu12)){
