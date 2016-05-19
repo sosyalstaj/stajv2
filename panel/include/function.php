@@ -71,11 +71,18 @@
 			require_once("basvur.php");
 		}
 		else if($sayfa=="basvurular-goster"){
-			require_once("ogrenci_basvuru_goster.php");
+			if ($_SESSION["staj"]["rol"]==1)
+				require_once("ogrenci_basvuru_goster.php");
+			else 
+				require_once("basvurular.php");
 		}
 		else if($sayfa=="hakkinda"){
 			require_once("hakkinda.php");
 		}
+		else if($sayfa=="basvurular-gecmis"){
+			require_once("basvurugecmisi.php");
+		}
+		
 	}
 
 	function islemler()

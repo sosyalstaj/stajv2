@@ -65,6 +65,7 @@ else if (@$_POST){
 	$k=0;
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
+				echo "g";
 			?>
 			
 		

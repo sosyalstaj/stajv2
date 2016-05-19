@@ -20,6 +20,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>BAŞVURULAR</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="index.php?sayfa=basvurular-goster">Göster</a></li>
+			<li><a href="index.php?sayfa=basvurular-gecmis">Geçmiş</a></li>
           </ul>
         </li>
 		<li class="treeview">
