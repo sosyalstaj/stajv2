@@ -1,4 +1,12 @@
 <?php
+if(@$_POST["sil"]){
+			global $conn;
+			$id=$_POST["anid"];
+			$query5 = "delete from tbl_foto where id=$id";
+			$sonuc5 = mysqli_query($conn,$query5);
+	
+	
+}
 	$id =$_SESSION["staj"]["id"];
 	global $conn;
 	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.hakkimda,K.rol,O.aka_id,O.cinsiyet,O.id,O.ilce,O.uni,O.adres,O.okul_no,O.sinif,O.bolum,O.uni,O.fakulte,O.il from 
@@ -181,5 +189,33 @@
            
               <!-- /.box-footer -->
             </form>
+			<div style="width:100%;">
+			<?php
+			
+					global $conn;
+					$query4 = "select * from tbl_foto where user_id=".$_SESSION["staj"]["id"];
+					$sonuc4 = mysqli_query($conn,$query4);
+					if($sonuc4)
+					{	
+						$k=0;
+						while ($row4 = mysqli_fetch_array($sonuc4)) {
+							?>
+							<form action="" method="POST" style="width:160px; float:left;"><br/>
+							<div style="width:150px;">
+							<img class="profile-user-img img-responsive " src="<?php echo $row4["foto"];?>" alt="User profile picture">
+							<input type="submit" name="sil" class="btn btn-info pull-right" value="Sil"/>
+							 <input type="hidden" name="anid" value="<?php echo $row4["id"]; ?>" />
+							 </div>
+							</form>
+							<?php
+		
+					}
+					
+					}
+			?>
+			
+				</div>
+			
+			
 		</div>
 	</center>
