@@ -1,7 +1,7 @@
 <?php
 	$id =$_SESSION["staj"]["id"];
 	global $conn;
-	$query_profil ="Select K.adi,K.mail,K.foto,K.rol,I.id,I.ilce,I.adres,I.aciklama,I.il from 
+	$query_profil ="Select K.adi,K.mail,K.hakkimda,K.foto,K.rol,I.id,I.ilce,I.adres,I.aciklama,I.il from 
 			tbl_kullanici as K INNER JOIN tbl_isyeri as I on K.id = I.user_id WHERE K.id =".$id;
 			
 	$kisi_sonuc=mysqli_query($conn,$query_profil);
@@ -42,7 +42,7 @@
 		
 								
                   	<div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">›l</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">√ùl</label>
 
                   <div class="col-sm-10">
                     <select name="il" id="il" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
@@ -55,11 +55,11 @@
                   </div>
                 </div>
 			     	<div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">›lÁe</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">√ùl√ße</label>
 
                   <div class="col-sm-10">
                     <select name="ilce" id ="ilce" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-					         <option value="-1">›l SeÁ</option>
+					         <option value="-1">√ùl Se√ß</option>
           <?php
 					$query_ilce ="Select id,ilce from tbl_ilce WHERE il_id=".$kisi["il"];
 					$ilce_sonuc =mysqli_query($conn,$query_ilce);
@@ -77,16 +77,24 @@
                   </div>
                 </div>
 				  <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">AÁ˝klama</label>
+                  <label for="inputPassword3" class="col-sm-2 control-label">A√ß√Ωklama</label>
 
                   <div class="col-sm-10">
                     <input type="text"name="aciklama" class="form-control" id="inputPassword3" placeholder="Adres"value="<?php echo $kisi["aciklama"]; ?>"/>
                   </div>
                 </div>
               
+                 <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Hakkƒ±mda</label>
+
+                  <div class="col-sm-10">
+                    <textarea name="hakkimda"  class="form-control" rows="4"><?php echo $kisi["hakkimda"]; ?></textarea>
+                  </div>
+                </div>
+              
               <div class="box-footer">
                 
-                <input type="submit" name="isyeriGuncelle" class="btn btn-info pull-right" value="G¸ncelle"/>
+                <input type="submit" name="isyeriGuncelle" class="btn btn-info pull-right" value="G√ºncelle"/>
               </div>
               <!-- /.box-footer -->
             </form>

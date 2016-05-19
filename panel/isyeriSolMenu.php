@@ -36,6 +36,5 @@
             <li><a href="index.php?sayfa=etkinlikler-ekle">Ekle</a></li>
           </ul>
         </li>
-		 <li><a href="index.php?sayfa=hakkinda"><i class="fa fa-circle-o text-aqua"></i> <span>HAKKINDA</span></a></li>
-		  <li><a href="index.php?sayfa=iletisim"><i class="fa fa-share"></i> <span>İLETİŞİM</span></a></li>
+		   <li><a href="index.php?sayfa=iletisim"><i class="fa fa-share"></i> <span>İLETİŞİM</span></a></li>
       </ul>
