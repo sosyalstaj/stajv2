@@ -76,6 +76,9 @@
 		else if($sayfa=="hakkinda"){
 			require_once("hakkinda.php");
 		}
+		else if($sayfa=="staj_eslesmeleri"){
+			require_once("akademisyen_staj_gor.php");
+		}
 	}
 
 	function islemler()

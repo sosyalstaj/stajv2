@@ -30,6 +30,7 @@
             <li><a href="index.php?sayfa=etkinlikler-ekle">Ekle</a></li>
           </ul>
         </li>
+		<li><a href="index.php?sayfa=staj_eslesmeleri"><i class="fa fa-link"></i> <span>STAJ EŞLEŞMELERİ</span></a></li>
 		 <li><a href="index.php?sayfa=hakkinda"><i class="fa fa-link"></i> <span>HAKKINDA</span></a></li>
 		  <li><a href="index.php?sayfa=iletisim"><i class="fa fa-link"></i> <span>İLETİŞİM</span></a></li>
       </ul>
