@@ -76,6 +76,12 @@
 		else if($sayfa=="projeler-ekle"){
 			require_once("projeEkle.php");
 		}
+		else if($sayfa=="duyurular-goster"){
+			require_once("duyuruGoster.php");
+		}
+		else if($sayfa=="duyurular-ekle"){
+			require_once("duyuruEkle.php");
+		}
 		else if($sayfa=="iletisim"){
 			require_once("iletisim.php");
 		}
