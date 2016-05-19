@@ -45,7 +45,17 @@
 	
 
 ?>
-<ul class="timeline">
+
+			  
+			  
+			  
+			  
+			  
+			  
+			  <section class="content">
+		<div class="row">
+   <div class="col-md-12">
+	<ul class="timeline">
 				<!-- END timeline item -->
                 <!-- timeline item -->
                 <li>
@@ -165,7 +175,7 @@
 					$k++;
 			
 				?>
-				<img src="<?php echo $foto["foto"]; ?> alt="..." class="margin">
+				<img src="<?php echo $foto["foto"]; ?> alt="..." class="margin"/>
 				<?php
 				
 				
@@ -184,3 +194,24 @@
                   <i class="fa fa-clock-o bg-gray"></i>
                 </li>
               </ul>
+			  </div>
+			  </div>
+          <!-- row -->
+        
+          <div class="row" style="margin-top: 10px;">
+            <div class="col-md-12">
+              <div class="box box-primary">
+                <div class="box-header">
+                  <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
+                </div>
+                <div class="box-body">
+                  <pre style="font-weight: 600;">
+						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]."kullanicisina aittir. ";?>
+    
+                  </pre>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+
+        </section>

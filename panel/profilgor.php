@@ -1,9 +1,12 @@
 <?php
 
 
+if(@$_POST["id"])
+{
+	
 
 
-	$id =$_SESSION["staj"]["id"];//  sessiondan gelecek
+	$id =$_POST["id"];//  sessiondan gelecek
 
 		global $conn;
 		$query ="select * from tbl_kullanici where id=$id";
@@ -42,7 +45,7 @@
 			$hakkinda["icerik"]="girilmemis";
 			$hakkinda["tarih"]="girilmemis";
 		}
-	
+	}
 
 ?>
 
@@ -85,8 +88,7 @@
                       <?php echo $hakkinda["icerik"]; ?>
                     </div>
                     <div class="timeline-footer">
-                      <a class="btn btn-primary btn-xs">Duzenle</a>
-                      <a class="btn btn-danger btn-xs">Sil</a>
+                      
                     </div>
                   </div>
                 </li>
@@ -145,7 +147,7 @@
 					    Gmail : <?php echo $iletisim["gmail"]; ?><br>
                     </div>
                     <div class="timeline-footer">
-                      <a class="btn btn-primary btn-xs">Duzenle</a>
+                     
                      
                     </div>
                   </div>
@@ -200,7 +202,7 @@
         
           <div class="row" style="margin-top: 10px;">
             <div class="col-md-12">
-              <div class="box box-primary"> 
+              <div class="box box-primary">
                 <div class="box-header">
                   <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
                 </div>
