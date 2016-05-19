@@ -4,17 +4,12 @@ $id=$_SESSION['staj']['id'];
 
 if(@$_POST){
 		if(@$_POST["proje"]=="gitti"){
-			echo "<script>alert('zaaaa')</script>";
 			$p_adi=$_POST["projeAdi"];
 			$p_icerik=$_POST["projeIcerik"];
 			$tarih=Date("j-n-o");
 			global $conn;
 			$sorgu = "INSERT INTO `tbl_proje` (`p_adi`, `p_icerik`, `tarih`, `user_id`) VALUES ('".$p_adi."','".$p_icerik."','".$tarih."','".$id."')";
 			$sonuc=mysqli_query($conn,$sorgu);
-			if($sonuc)
-				echo "eklendi";
-			else 
-				echo "eklenmedi";
 		}
 	}
 ?>
