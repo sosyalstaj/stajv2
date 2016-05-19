@@ -8,7 +8,7 @@ $id=$_SESSION["staj"]["id"];
 <div class="col-md-6" style="width:100%;">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Basvurular</h3>
+                  <h3 class="box-title">Öğrencilerim</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
