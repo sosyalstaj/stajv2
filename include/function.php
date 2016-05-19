@@ -57,6 +57,7 @@
 			$id=$row["id"];
 			$adi =$row["adi"];
 			$soyadi =$row["soyadi"];
+			$foto =$row["foto"];
 
 			$query ="select id from tbl_bildirimlerim where durum =0 and user_id =$id";
 			$b_sayi=0;
@@ -69,7 +70,7 @@
 					$b_sayi +=mysqli_num_rows($sonuc);
 				}
 			}
-			$user=array("id"=>$id,"adi"=>$adi,"soyadi"=>$soyadi,"mail"=>$mail,"rol"=>$rol,"bildirim"=>$b_sayi); //array("ID"=>$id,"Adi"=>$adi,"Soyadi"=>$soyadi,"Mail"=>$mail,"Rol"=>$rol);
+			$user=array("id"=>$id,"adi"=>$adi,"soyadi"=>$soyadi,"mail"=>$mail,"rol"=>$rol,"bildirim"=>$b_sayi,"foto"=>$foto); //array("ID"=>$id,"Adi"=>$adi,"Soyadi"=>$soyadi,"Mail"=>$mail,"Rol"=>$rol);
 			
 			$_SESSION["staj"] =$user;
 				
