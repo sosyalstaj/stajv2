@@ -82,8 +82,9 @@ else if (@$_POST){
 							 else if ($row["anlasma"]==-1) {echo "Onay Bekleniyor"; } ?>
 					  </td>
 					  <form action="" method="POST">
-					    <td><input type="submit" name="reddet"  class="btn btn-danger" value="0"/> 
+					    <td>
 						<input type="submit" name="onay" class="btn btn-success" value="1"/>
+						<input type="submit" name="reddet"  class="btn btn-danger" value="0"/> 
 						</td>
 					 <input type="hidden" name="anid" value="<?php echo $row["id"]; ?>" />
 					  
