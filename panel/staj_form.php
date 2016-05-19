@@ -1,7 +1,7 @@
 ﻿<?php  
 	global $conn;
-		$sorgu = "SELECT * from tbl_kullanici as K INNER JOIN tbl_ogrenci as O on K.id = O.user_id inner JOIN tbl_bolum as B on B.id = O.bolum  Where K.id=1 ";  
-	    $sorgu2= "SELECT * from tbl_kullanici as K INNER JOIN tbl_iletisim as I on K.id = I.user_id WHERE K.id=1 ";  
+		$sorgu = "SELECT * from tbl_kullanici as K LEFT JOIN tbl_ogrenci as O on K.id = O.user_id LEFT JOIN tbl_bolum as B on B.id = O.bolum  Where K.id=".$_SESSION["staj"]["id"]." ";  
+	    $sorgu2= "SELECT * from tbl_kullanici as K LEFT JOIN tbl_iletisim as I on K.id = I.user_id WHERE K.id=".$_SESSION["staj"]["id"]." ";  
 		$sonuc=mysqli_query($conn,$sorgu);
 		$sonuc2=mysqli_query($conn,$sorgu2);
 		

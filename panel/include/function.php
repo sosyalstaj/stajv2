@@ -67,6 +67,9 @@
 		else if($sayfa=="basvurular-goster"){
 			require_once("ogrenci_basvuru_goster.php");
 		}
+		else if($sayfa=="hakkinda"){
+			require_once("hakkinda.php");
+		}
 	}
 
 	function islemler()
