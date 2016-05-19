@@ -18,10 +18,9 @@ if(@$_POST["basvur"]){
 	$onsoz=@$_POST["onsoz"];
 	$aciklama=@$_POST["aciklama"];
 	$tarih=date("j-n-o");
-	echo $tarih;
 
 $sorgu2="INSERT INTO `tbl_basvuru`(`isyeri_id`, `ogrenci_id`, `tarih`, `onsoz`, `aciklama`,anlasma) VALUES (".$isyeri_id.",".$ogrenci_id.",'".$tarih."','".$onsoz."','".$aciklama."',-1)";
-echo $sorgu2;
+
 	if($sonuc2=mysqli_query($conn,$sorgu2))
 	{	
 		echo "Başvuru yapıldı";
@@ -32,7 +31,11 @@ echo $sorgu2;
 	}
 }
 ?>
-
+<!doctype html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<body>
 
 <center>
 	<div class="box-body">
@@ -63,14 +66,15 @@ echo $sorgu2;
                   <label for="inputPassword3" class="col-sm-2 control-label">Önsöz</label>
 
                   <div class="col-sm-10">
-                    <input name="onsoz"type="text" class="form-control" name="parola" id="inputPassword3" placeholder="Önsöz" />
+                    <input name="onsoz"type="text" class="form-control"  id="inputPassword3" placeholder="Önsöz" />
                   </div>
                 </div>
 				      <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Açıklama</label>
 
                   <div class="col-sm-10">
-                    <input type="text" name="aciklama"class="form-control" name="parola" id="inputPassword3" placeholder="Açıklama" />
+					<textarea name="aciklama" id="compose-textarea" class="form-control" style="height: 300px">
+						</textarea>
                   </div>
                 </div>
 
@@ -80,3 +84,15 @@ echo $sorgu2;
             </form>
 		</div>
 	</center>
+	
+</script>
+
+<script>
+  $(function () {
+    $("#compose-textarea").wysihtml5();
+  });
+</script>
+
+
+</body>
+</html>
