@@ -207,10 +207,11 @@
 		$il=temizle(@$_POST["il"]);
 		$ilce=temizle(@$_POST["ilce"]);
 		$adres=temizle(@$_POST["adres"]);
+		$hakkinda=temizle(@$_POST["hakkinda"]);
 
 		global $conn;
 		$msg ="";
-		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail' ";
+		$query ="update tbl_kullanici SET adi='$adi' , soyadi ='$soyadi' ,mail ='$mail',hakkinda='$hakkinda' ";
 		$yuklenecek_dosya = "profil/" . md5($_FILES['foto']['name']).substr($_FILES['foto']['name'], -4);
 		if($_FILES["foto"]["name"] != "")
 		{

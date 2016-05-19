@@ -1,7 +1,7 @@
 <?php
 	$id =$_SESSION["staj"]["id"];
 	global $conn;
-	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.rol,O.aka_id,O.cinsiyet,O.id,O.ilce,O.uni,O.adres,O.okul_no,O.sinif,O.bolum,O.uni,O.fakulte,O.il from 
+	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.hakkimda,K.rol,O.aka_id,O.cinsiyet,O.id,O.ilce,O.uni,O.adres,O.okul_no,O.sinif,O.bolum,O.uni,O.fakulte,O.il from 
 			tbl_kullanici as K INNER JOIN tbl_ogrenci as O on K.id = O.user_id WHERE K.id =".$id;
 			
 	$kisi_sonuc=mysqli_query($conn,$query_profil);
@@ -168,7 +168,13 @@
                     <input type="text"name="adres" class="form-control" id="inputPassword3" placeholder="Adres"value="<?php echo $kisi["adres"]; ?>"/>
                   </div>
                 </div>
-              
+           <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Hakkımda</label>
+
+                  <div class="col-sm-10">
+                    <textarea name="hakkimda"  class="form-control" rows="4"><?php echo $kisi["hakkimda"]; ?></textarea>
+                  </div>
+                </div>
               
                 
                 <input type="submit" name="profilduzenle" class="btn btn-info pull-right"value="Güncelle"/>
