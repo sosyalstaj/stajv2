@@ -109,7 +109,12 @@
 		else if($sayfa=="profil-gor"){
 			require_once("profilgor.php");
 		}
-		
+		else if($sayfa=="ogrenci-goster"){
+			require_once("akademisyenogrencionayla.php");
+		}
+		else if($sayfa=="ogrenci-listem"){
+			require_once("akademisyenogrencilistesi.php");
+		}
 	}
 
 	function islemler()
