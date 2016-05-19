@@ -1,7 +1,7 @@
 <?php
 	$id =$_SESSION["staj"]["id"];
 	global $conn;
-	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.rol,O.cinsiyet,O.id,O.ilce,O.uni,O.adres,O.okul_no,O.sinif,O.bolum,O.uni,O.fakulte,O.il from 
+	$query_profil ="Select K.adi,K.soyadi,K.mail,K.foto,K.rol,O.aka_id,O.cinsiyet,O.id,O.ilce,O.uni,O.adres,O.okul_no,O.sinif,O.bolum,O.uni,O.fakulte,O.il from 
 			tbl_kullanici as K INNER JOIN tbl_ogrenci as O on K.id = O.user_id WHERE K.id =".$id;
 			
 	$kisi_sonuc=mysqli_query($conn,$query_profil);
@@ -94,7 +94,6 @@
 						$query_bolum ="Select id,bolum_adi from tbl_bolum WHERE fakulte_id=".$kisi["fakulte"];
 						$bol_sonuc =mysqli_query($conn,$query_bolum);
 						optionListele($bol_sonuc ,$kisi["fakulte"],"id","bolum_adi");
-				  	?>
 				  ?>
 					</select>
                   </div>
@@ -113,7 +112,27 @@
                     <input type="text" name="okul_no"class="form-control" id="inputPassword3" placeholder="Okul No"value="<?php echo $kisi["okul_no"]; ?>"/>
                   </div>
                 </div>
-												
+									
+
+
+            <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Akademisyen </label>
+
+                    <div class="col-sm-10">
+                    <select name="akademisyen" id="akademisyen" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                      <option value="-1">Akademisyen Seç</option>
+                  <?php
+                    $query_aka ="SELECT CONCAT_WS(' ',K.adi ,K.soyadi) as 'isim',K.id FROM tbl_akademisyen as UID 
+                    INNER JOIN tbl_kullanici as K on UID.user_id = K.id WHERE UID.uni_id = ".$kisi["uni"];
+                    $bol_sonuc =mysqli_query($conn,$query_aka);
+                    optionListele($bol_sonuc ,$kisi["aka_id"],"id","isim");
+                  ?>
+         
+          </select>
+          </div>
+          </div>
+
+
                   	<div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">İl</label>
 
@@ -150,10 +169,10 @@
                   </div>
                 </div>
               
-              <div class="box-footer">
+              
                 
                 <input type="submit" name="profilduzenle" class="btn btn-info pull-right"value="Güncelle"/>
-              </div>
+           
               <!-- /.box-footer -->
             </form>
 		</div>

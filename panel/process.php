@@ -6,8 +6,8 @@
 		if(@$_GET["islem"]=="fakulte")
 		{
 			$uni_id =temizle(@$_POST["uni"]);
-			echo "kkk".$uni_id;
 			fakulteListele($uni_id);
+			
 		}
 		else if(@$_GET["islem"]=="bolum")
 		{
@@ -19,6 +19,11 @@
 			$il =temizle(@$_POST["il"]);
 			ilce_listele($il);
 		}
-
+		else if(@$_GET["islem"] =="akademisyenList")
+		{
+			$uni_id =temizle(@$_POST["uni"]);
+			akademisyenListele($uni_id);
+		}
+		
 	}
 ?>

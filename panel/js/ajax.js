@@ -8,10 +8,28 @@
 		data:{uni:uni},
 		datatype:"html", 
 		beforeSend : function(){ },
-		success :function(cevap){ $("#fakulte").html(cevap);dom();},
+		success :function(cevap){ 
+			$("#fakulte").html(cevap);
+			akaList(uni);
+		},
 		error: function(){ alert("hata oluştu "); }
 	});
 });
+
+var akaList =function(uni)
+{
+	$.ajax({
+		type:"POST", 
+		url:"process.php?islem=akademisyenList",
+		data:{uni:uni},
+		datatype:"html", 
+		beforeSend : function(){ },
+		success :function(cevap){ 
+			$("#akademisyen").html(cevap);
+		},
+		error: function(){ alert("hata oluştu "); }
+	});
+}
 
 $("#fakulte").change(function(){
 		var cb = document.getElementById("fakulte");
