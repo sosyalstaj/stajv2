@@ -2,8 +2,8 @@
 	<label>  Cinsiyet </label>
 	<div>
 	<select name="cinsiyet" size="1" class="form-control">
-		<option value="0">Bay</option>
-	    <option value="1">Bayan</option>
+		<option value="1">Bay</option>
+	    <option value="0">Bayan</option>
 	</select>
 	</div>
 </div>
