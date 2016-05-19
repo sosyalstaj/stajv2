@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+   <link rel="stylesheet" href="css/uyari.css">
+   <link rel="stylesheet" href="css/form.css">
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

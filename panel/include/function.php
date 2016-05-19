@@ -33,10 +33,42 @@
 		{
 			require_once("ogrProfilDuzenle.php");
 		}
+		else if($sayfa=="form-goster"){
+			require_once("staj_form.php");
+		}
+		else if($sayfa=="profil-goster"){
+			require_once("/profil/index.php");
+		
+		}
 	}
 
 	function islemler()
 	{
 
+	}
+	function il_listele()
+	{
+		global $conn;
+		$query = "select * from tbl_il";
+		$sonuc = mysqli_query($conn,$query);
+		if($sonuc)
+		{	
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['il']."</option>";
+			}
+		}
+	}
+	function ilce_listele($il_id)
+	{
+		global $conn;
+		$query ="select * from tbl_ilce where il_id = $il_id";
+		$sonuc =mysqli_query($conn,$query);
+		if($sonuc)
+		{
+			echo "<option value='-1'>ilçe seç</option>";
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['ilce']."</option>";
+			}
+		}
 	}
 ?>

@@ -55,8 +55,7 @@
     <section class="content">
      
       <div class="row">
-          <?php
-
+          <?php			
             sayfa_getir();
           ?>
       </div>
