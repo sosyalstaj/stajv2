@@ -26,9 +26,7 @@ if(@$_POST["kaydet"]){
 			echo '<div class="alert alert-success">
 				  <strong>Başarılı!</strong> İşlem başarılı bir şekilde kaydedildi...
 				</div>
-				<script>  alert("Başarılı...");
-				window.location="index.php?sayfa=hakkinda";
-		        </script> 
+				
 				';
 		}
 		else{
@@ -36,9 +34,7 @@ if(@$_POST["kaydet"]){
 			<div class="alert alert-danger">
 			  <strong>Başarısız!</strong> Kaydetme işlemi başarısız.
 			</div>
-			<script>  alert("Başarısız!");
-				window.location="index.php?sayfa=hakkinda";
-		      </script> 
+			
 			';
 		}
 	}
@@ -50,18 +46,14 @@ if(@$_POST["kaydet"]){
 			echo '<div class="alert alert-info">
 				  <strong>Başarılı!</strong> İşlem başarılı bir şekilde güncellendi...
 				</div>
-				<script>  alert("Başarılı...");
-				window.location="index.php?sayfa=hakkinda";
-		        </script> 
+				 
 				';
 		}
 		else{
 			echo '<div class="alert alert-warning">
 				  <strong>Başarısız!</strong> Güncelleme gerçeklenemedi.
 				</div>
-				<script>  alert("Başarısız!");
-				window.location="index.php?sayfa=hakkinda";
-		      </script> 
+				 
 				';
 		}
 	}
