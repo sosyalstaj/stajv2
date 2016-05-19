@@ -47,7 +47,7 @@
 		$mail=temizle($mail);
 		$sifre=MD5($sifre);
 		global $conn;
-		$query ="select * from tbl_kullanici where mail='$mail' and parola='$sifre' and onay=1";
+		$query ="select * from tbl_kullanici where mail='$mail' and parola='$sifre'";// and onay=1";
 		$sonuc =mysqli_query($conn,$query);
 		if(@mysqli_num_rows($sonuc) ==1)
 		{
@@ -59,18 +59,13 @@
 			$soyadi =$row["soyadi"];
 			$foto =$row["foto"];
 
-			$query ="select id from tbl_bildirimlerim where durum =0 and user_id =$id";
+			$query ="select id from tbl_mesaj where durum =0 and alici_id =$id";
 			$b_sayi=0;
 			if($sonuc=mysqli_query($conn,$query))
 			{
 				$b_sayi=mysqli_num_rows($sonuc);
-				$query ="select id from tbl_mesaj where durum =0 and alici_id =$id";
-				if($sonuc=mysqli_query($conn,$query))
-				{
-					$b_sayi +=mysqli_num_rows($sonuc);
-				}
 			}
-			$user=array("id"=>$id,"adi"=>$adi,"soyadi"=>$soyadi,"mail"=>$mail,"rol"=>$rol,"bildirim"=>$b_sayi,"foto"=>$foto); //array("ID"=>$id,"Adi"=>$adi,"Soyadi"=>$soyadi,"Mail"=>$mail,"Rol"=>$rol);
+			$user=array("id"=>$id,"adi"=>$adi,"soyadi"=>$soyadi,"mail"=>$mail,"rol"=>$rol,"mesaj"=>$b_sayi,"foto"=>$foto); 
 			
 			$_SESSION["staj"] =$user;
 				

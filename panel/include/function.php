@@ -2,12 +2,26 @@
 	session_start();
 
 	session_kontrol();
+	mesajSay();
 	function session_kontrol()
 	{
 		// session atanmamş sa login.php ye yönlendir
 		if(!isset($_SESSION["staj"])){
 			header("Location: ../index.php?sayfa=giris");
 		}
+	}
+
+	function mesajSay()
+	{
+		global $conn;
+		$id =$_SESSION["staj"]["id"];
+		$query ="select id from tbl_mesaj where durum =0 and alici_id =$id";
+			$b_sayi=0;
+			if($sonuc=mysqli_query($conn,$query))
+			{
+				$b_sayi=mysqli_num_rows($sonuc);
+			}
+		$_SESSION["staj"]["mesaj"] =$b_sayi;
 	}
 
 	function successMesaj($txt)
@@ -25,6 +39,7 @@
 		$text =htmlspecialchars($text);
 		return $text;
 	}
+
 
 	function sayfa_getir()
 	{
