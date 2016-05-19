@@ -34,7 +34,7 @@
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
 					
-					$anlasma="Başvurunnuz bekleniyor";
+				$anlasma="Başvurunuz bekleniyor";
 				$query2 = "select * from tbl_kullanici where id=".$row["isyeri_id"];
 				$sonuc2 = mysqli_query($conn,$query2);
 				while ($row2 = mysqli_fetch_array($sonuc2)) {
@@ -58,7 +58,7 @@
                       <td><?php echo $row["adi"]; ?></td>
 					  <td><?php echo $row["soyadi"];?></td>
 					  <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row["isyeri_id"]; ?>"><?php echo $row2["adi"];?></a></td>
-					   <td><?php echo $anlasma ?></td>
+					   <td class="btn-warning"><?php echo $anlasma ?></td>
 					 
                     </tr>
              

@@ -43,7 +43,7 @@
 					$anlasma="Başvurunnuz reddedildi";
 				else if($row["anlasma"]==1)
 					$anlasma="Başvurunnuz kabul edildi";
-				else
+				
 			?>
 			
 					
@@ -57,7 +57,13 @@
                       <td><?php echo $row["adi"]; ?></td>
 					  <td><?php echo $row["soyadi"];?></td>
 					  <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row["isyeri_id"]; ?>"><?php echo $row2["adi"];?></a></td>
-					   <td><?php echo $anlasma ?></td>
+					  <?php
+					  
+						if($row["anlasma"]==0)
+							echo "<td  class=\"btn-danger\">".$anlasma."</td>";
+						else if($row["anlasma"]==1)
+							echo "<td class=\"btn-success\"> ".$anlasma."</td>";
+					   ?>
 					 
                     </tr>
              
