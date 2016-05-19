@@ -3,15 +3,6 @@ global $conn;
 if(!$conn){
 	echo "veritabani bağlantı hatasi";
 }
-else{
-	
-	$sorgu="select * from tbl_iletisim where user_id=".$_SESSION["staj"]["id"];
-	if($sonuc=mysqli_query($conn,$sorgu))
-	{	
-		$array=mysqli_fetch_array($sonuc);
-	}
-		
-}
 
 if(@$_POST["duzenle"]){
 	global $conn;
@@ -20,7 +11,8 @@ if(@$_POST["duzenle"]){
 	$github=@$_POST["github"];
 	$gmail=@$_POST["gmail"];
 	$web_site=@$_POST["web_site"];
-	
+	$sorgu="select * from tbl_iletisim where user_id=".$_SESSION["staj"]["id"];
+	$sonuc=mysqli_query($conn,$sorgu);
 	if(!mysqli_num_rows($sonuc)>0)
 	{
 		$sorgu="INSERT INTO tbl_iletisim(facebook, gmail, github, web_site, tel, user_id) VALUES ('".$facebook."','".$gmail."','".$github."','".$web_site."','".$tel."',".$_SESSION["staj"]["id"].")";
@@ -61,6 +53,11 @@ if(@$_POST["duzenle"]){
 		}
 	}
 }
+$sorgu="select * from tbl_iletisim where user_id=".$_SESSION["staj"]["id"];
+	if($sonuc=mysqli_query($conn,$sorgu))
+	{	
+		$array=mysqli_fetch_array($sonuc);
+	}
 ?>
 <center>
 	<div class="col-md-6" >
