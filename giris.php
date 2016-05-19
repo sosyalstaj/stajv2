@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	$sonuc="";
 	if(@$_POST["giris"])
 	{
@@ -9,7 +9,7 @@
 	}
 ?>
 <div id="content-login">
-	<div><h2>Login</h2></div>
+	<div><h2>Giriş Yap</h2></div>
 	<div><?php echo $sonuc;?></div>
 	<form method="post">
 		<div><input type="text" class="giris" name="email" placeholder="E-mail" required/></div>

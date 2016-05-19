@@ -33,9 +33,6 @@
 <head>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link href="projem.css" rel="stylesheet" type="text/css">
-
-
-
  
 
 
@@ -93,7 +90,7 @@ if($sonuc2){
 	<div id="mesajright">
 		
 		<div class="box box-solid">
-            <div class="box-header with-border">
+            <div class="box-header with-border box box-primary">
               <h3 class="box-title">Mesajlar</h3>
 
               <div class="box-tools">
@@ -176,11 +173,11 @@ if($sonuc2){
 
 	
 	
-	<div id="mesajleft" class="gidenKutusu">
+	<div id="mesajleft" class="gidenKutusu" style="visibility:hidden;">
 		<div class="col-md-9" style="width:100%">
           <div class="box box-primary" >
 		<div class="box-header with-border">
-				<h3 class="box-title">Gelen Kutusu</h3>
+				<h3 class="box-title">Giden Kutusu</h3>
 				<div class="box-tools pull-right">
 					<?php echo " ".Date("j-n-o"); ?>
               </div>
@@ -366,10 +363,10 @@ $( "input[type=checkbox]" ).on( "click", checkBoxSayac );
 
 
 $(document).ready(function()
-{
-	console.log("ss");
+{		
 	$(".gidenKutusu").hide();
 	$("#yeniMesajYolla").hide();
+	$("#yenimesajlarim").hide();
 	//document.getElementsByClassName('gidenKutusu').style.visibility='hidden';
     $("msjkonu").click(function()
 	{
@@ -394,6 +391,7 @@ $(document).ready(function()
 		$(".gidenKutusu").show();
 		$("#gelenTikla").attr("class","");
 		$("#gidenTikla").attr("class","active");
+		$(".gidenKutusu").css("visibility","visible");
 		$("#yenimesajlarim").show();
 	});
 	
@@ -406,6 +404,7 @@ $(document).ready(function()
 	});
 	
 	$(".mesajiicerik").click(function(){
+		$("#yenimesajlarim").show();
 		console.log("this: "+ this.id);
 		$.ajax({
 		  method: "POST",
@@ -448,7 +447,9 @@ $(document).ready(function()
 	
 	
 	
-	$(".mesajiicerikGiden").click(function(){
+	$(".mesajiicerikGiden").click(function()
+	{
+
 		console.log("this: "+ this.id);
 		$.ajax({
 		  method: "POST",

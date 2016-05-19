@@ -26,10 +26,23 @@ if(@$_POST["duzenle"]){
 		$sorgu="INSERT INTO tbl_iletisim(facebook, gmail, github, web_site, tel, user_id) VALUES ('".$facebook."','".$gmail."','".$github."','".$web_site."','".$tel."',".$_SESSION["staj"]["id"].")";
 		if($sonuc=mysqli_query($conn,$sorgu))
 		{	
-			echo "Eklendi";
+			echo '<div class="alert alert-success">
+				  <strong>Başarılı!</strong> İşlem başarılı bir şekilde kaydedildi...
+				</div>
+				<script>  alert("Başarılı...");
+				window.location="index.php?sayfa=iletisim";
+		      </script> 
+				';
 		}
 		else{
-			echo "Eklenmedi";
+			echo '
+			<div class="alert alert-danger">
+			  <strong>Başarısız!</strong> Kaydetme işlemi başarısız.
+			</div>
+			<script>  alert("Başarısız!");
+				window.location="index.php?sayfa=iletisim";
+		      </script> 
+			';
 		}
 	}
 	else{
@@ -37,10 +50,22 @@ if(@$_POST["duzenle"]){
 
 		if($sonuc=mysqli_query($conn,$sorgu))
 		{	
-			echo "Güncellendi";
+				echo '<div class="alert alert-info">
+				  <strong>Başarılı!</strong> İşlem başarılı bir şekilde güncellendi...
+				</div>
+				<script>  alert("Başarılı...");
+				window.location="index.php?sayfa=iletisim";
+		      </script> 
+				';
 		}
 		else{
-			echo "güncellenmedi";
+				echo '<div class="alert alert-warning">
+				  <strong>Başarısız!</strong> Güncelleme gerçeklenemedi.
+				</div>
+				<script>  alert("Başarısız!");
+				window.location="index.php?sayfa=iletisim";
+		      </script> 
+				';
 		}
 	}
 }
