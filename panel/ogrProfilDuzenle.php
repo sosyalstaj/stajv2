@@ -69,7 +69,7 @@ if(@$_POST["sil"]){
 
                   <div class="col-sm-10">
                     <select name="uni" id="uni" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-  					       <option value="-1">Ünüversite Seç</option>
+  					       <option value="-1">Üniversite Seç</option>
              <?php
     						$query_uni ="Select id ,uni_adi from tbl_uni";
     						$uni_sonuc =mysqli_query($conn,$query_uni);
