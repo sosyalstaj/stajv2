@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 if(@$_GET["id"])
@@ -64,7 +64,7 @@ if(@$_GET["id"])
                 <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-red">
-                  Hakkinda
+                  Hakkında
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -119,7 +119,7 @@ if(@$_GET["id"])
 		?>
                   <li class="time-label">
                   <span class="bg-red">
-                  iletisim
+                  İletişim
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -128,7 +128,7 @@ if(@$_GET["id"])
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> </span>
-                    <h3 class="timeline-header">Baslica Bilgiler</h3>
+                    <h3 class="timeline-header">Başlıca Bilgiler</h3>
                     <div class="timeline-body" style="padding-left:10px;">
 						Facebook : <?php echo $iletisim["facebook"]; ?><br>
 					    Web Site : <?php echo $iletisim["web_site"]; ?><br>
@@ -155,7 +155,7 @@ if(@$_GET["id"])
                   <i class="fa fa-camera bg-purple"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> </span>
-                    <h3 class="timeline-header"><a href="#"><?php echo $kullanici["adi"]." ".$kullanici["soyadi"]; ?></a> yuklenen fotograflari</h3>
+                    <h3 class="timeline-header"><a href="#"><?php echo $kullanici["adi"]." ".$kullanici["soyadi"]; ?></a> yüklediği görseller</h3>
                     <div class="timeline-body">
 					<?php
 				$query31="SELECT*FROM tbl_foto where user_id=$id";//".$_SESSION["staj"]->getId();
@@ -167,7 +167,7 @@ if(@$_GET["id"])
 					$k++;
 			
 				?>
-				<img src="<?php echo $foto["foto"]; ?> alt="..." class="margin"/>
+				<img src="<?php echo $foto["foto"]; ?>" alt="..." class="margin" style="width:300px;height:250px;" />
 				<?php
 				
 				
@@ -193,12 +193,9 @@ if(@$_GET["id"])
           <div class="row" style="margin-top: 10px;">
             <div class="col-md-12">
               <div class="box box-primary">
-                <div class="box-header">
-                  <h3 class="box-title"><i class="fa fa-code"></i> ÖNEMLİ !!!</h3>
-                </div>
                 <div class="box-body">
                   <pre style="font-weight: 600;">
-						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]."kullanicisina aittir. ";?>
+						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]." kullanıcısına aittir. ";?>
     
                   </pre>
                 </div><!-- /.box-body -->

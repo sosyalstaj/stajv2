@@ -45,7 +45,7 @@
                 <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-red">
-                  Hakkında
+                  Hakkımda
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -54,12 +54,12 @@
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i></span>
-                    <h3 class="timeline-header"><a href="#">Hakkında</h3>
+                    <h3 class="timeline-header"><a href="#">Ben</h3>
                     <div class="timeline-body" style="padding-left:10px;">
                       <?php echo $kullanici["hakkimda"]; ?>
                     </div>
                     <div class="timeline-footer">
-                      <a href="index.php?sayfa=profil-duzenle" class="btn btn-primary btn-xs">Duzenle</a>
+                      <a href="index.php?sayfa=profil-duzenle" class="btn btn-primary btn-xs">Düzenle</a>
                     </div>
                   </div>
                 </li>
@@ -100,7 +100,7 @@
 		?>
                   <li class="time-label">
                   <span class="bg-red">
-                  iletisim
+                  Görseller
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -109,7 +109,7 @@
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> </span>
-                    <h3 class="timeline-header"><a href="#"> Baslica Bilgiler</h3>
+                    <h3 class="timeline-header"><a href="#"> Başlıca Bilgiler</h3>
                     <div class="timeline-body" style="padding-left:10px;">
 						Facebook : <?php echo $iletisim["facebook"]; ?><br>
 					    Web Site : <?php echo $iletisim["web_site"]; ?><br>
@@ -127,7 +127,7 @@
                 <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-green">
-                   Resimler
+                   Görseller
                   </span>
                 </li>
                 <!-- /.timeline-label -->
@@ -136,7 +136,7 @@
                   <i class="fa fa-camera bg-purple"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> </span>
-                    <h3 class="timeline-header"><a href="#"><?php echo $kullanici["adi"]." ".$kullanici["soyadi"]; ?></a> yuklenen fotograflari</h3>
+                    <h3 class="timeline-header"><a href="index.php?sayfa=profil-goster"><?php echo $kullanici["adi"]." ".$kullanici["soyadi"]; ?></a> yüklediğin görseller</h3>
                     <div class="timeline-body">
 					<?php
 				$query31="SELECT*FROM tbl_foto where user_id=$id";//".$_SESSION["staj"]->getId();
@@ -177,7 +177,7 @@
 
                 <div class="box-body">
                   <pre style="font-weight: 600;">
-						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]."kullanıcısına aittir. ";?>
+						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]." kullanıcısına aittir. ";?>
     
                   </pre>
                 </div><!-- /.box-body -->
