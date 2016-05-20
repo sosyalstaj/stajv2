@@ -72,8 +72,8 @@ if(@$_GET["id"])
                 <li>
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> <?php echo $hakkinda["tarih"]; ?></span>
-                    <h3 class="timeline-header"><a href="#"> <?php echo $hakkinda["baslik"]; ?></a></h3>
+                    <span class="time"><i class="fa fa-clock-o"></i></span>
+                    <h3 class="timeline-header"><a href="#"><?php echo $kullanici["adi"]." ".$kullanici["soyadi"]; ?> Hakkında</a></h3>
                     <div class="timeline-body" style="padding-left:10px;">
                      <?php echo $kullanici["hakkimda"]; ?>
                     </div>
@@ -146,7 +146,7 @@ if(@$_GET["id"])
                 <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-green">
-                   Resimler
+                   Görseller
                   </span>
                 </li>
                 <!-- /.timeline-label -->
