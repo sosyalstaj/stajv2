@@ -81,7 +81,7 @@ else if (@$_POST){
                        <?php echo $row2["soyadi"]; ?>
                       </td>
                       <td><?php echo $row["okul_no"]; ?></td>
-					  <td><?php if ($row["akaonay"]==1){ echo "Öðrenciniz"; } 
+					  <td><?php if ($row["akaonay"]==1){ echo "Ã–ÄŸrenciniz"; } 
 							 else if ($row["akaonay"]==0) {echo "Reddedildi"; }
 							 else if ($row["akaonay"]==-1) {echo "Onay Bekleniyor"; } ?>
 					  </td>
