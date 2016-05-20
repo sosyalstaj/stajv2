@@ -7,7 +7,13 @@
             <div class="box-body">
               <!-- the events -->
               <div id="external-events">
-              		<div class="external-event bg-aqua">as</div>
+              		<div class="external-event bg-aqua">
+                      <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Check me out
+                          </label>
+                       </div>
+                  </div>
 	                <div class="external-event bg-green ">Lunch</div>
 	                <div class="external-event bg-yellow ">Go home</div>
 	                <div class="external-event bg-aqua " >Do homework</div>
@@ -34,9 +40,11 @@
     
     <div class="col-md-9">
         <div class="form-group">
-            <input type="email" id="inputSuccess" class="form-control" id="exampleInputEmail1" placeholder="Aranacak ifadeyi girin">
+            <input type="email" id="inputSuccess" class="form-control" placeholder="Aranacak ifadeyi girin">
         </div>
     </div>
+<div id="arama-sonuc" class="col-md-9">
 
+</div>
 
 

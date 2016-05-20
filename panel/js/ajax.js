@@ -61,3 +61,19 @@ $("#il").change(function(){
 	});
 });
 
+
+
+$("#inputSuccess").change(function(){
+		var cb = document.getElementById("il");
+		var il = cb.options[cb.selectedIndex].value;
+		
+		$.ajax({
+		type:"POST", 
+		url:"process.php?islem=arama",
+		data:{il:il},
+		datatype:"html", 
+		beforeSend : function(){ },
+		success :function(cevap){ $("#arama-sonuc").html(cevap);dom();},
+		error: function(){ alert("hata oluştu "); }
+	});
+});

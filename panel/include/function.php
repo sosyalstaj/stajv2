@@ -213,6 +213,21 @@
 		}
 	}
 
+	function akademisyenListele($uni_id)
+	{
+		global $conn;
+		$query ="SELECT K.adi,K.soyadi,K.id FROM tbl_akademisyen as UID 
+		INNER JOIN tbl_kullanici as K on UID.user_id = K.id WHERE UID.uni_id = $uni_id";
+		$sonuc =mysqli_query($conn,$query);
+		if($sonuc)
+		{
+			echo "<option value='-1'>Akademisyen Seç</option>";
+			while ($row = mysqli_fetch_array($sonuc)) {
+				echo "<option value=".$row['id'].">".$row['adi']." ".$row['soyadi']."</option>";
+			}
+		}
+	}
+
 	function profilGuncelle()
 	{
 		$id =$_SESSION["staj"]["id"];
