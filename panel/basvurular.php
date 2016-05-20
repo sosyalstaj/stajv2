@@ -84,9 +84,10 @@ else if (@$_POST){
                     
                     <tr>
                       <td><?php echo $k; ?></td>
-					     <td><?php echo $row25["adi"]; ?></td>
-                      <td><?php echo $row25["soyadi"]; ?></td>
-                      <td>
+					  <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row25["id"];?>" > <?php echo $row25["adi"]; ?></a></td>
+                      <td><a href="index.php?sayfa=profil-gor&id=<?php echo $row25["id"];?>" ><?php echo $row25["soyadi"]; ?></a></td>
+                      
+					  <td>
                        <?php echo $row["aciklama"]; ?>
                       </td>
                       <td><?php echo $row["tarih"]; ?></td>
