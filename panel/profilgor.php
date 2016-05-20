@@ -34,18 +34,7 @@ if(@$_GET["id"])
 				
 
 		}
-		$query1="SELECT*FROM tbl_hakkimizda where user_id=$id";//".$_SESSION["staj"]->getId();
-		$sonuc1 =mysqli_query($conn,$query1);
-		if(@mysqli_num_rows($sonuc1) ==1)
-		{
-			$hakkinda=mysqli_fetch_array($sonuc1);
-			
-		}
-		else{
-			$hakkinda["baslik"]="girilmemis";
-			$hakkinda["icerik"]="girilmemis";
-			$hakkinda["tarih"]="girilmemis";
-		}
+		
 	}
 
 ?>
@@ -86,7 +75,7 @@ if(@$_GET["id"])
                     <span class="time"><i class="fa fa-clock-o"></i> <?php echo $hakkinda["tarih"]; ?></span>
                     <h3 class="timeline-header"><a href="#"> <?php echo $hakkinda["baslik"]; ?></a></h3>
                     <div class="timeline-body" style="padding-left:10px;">
-                      <?php echo $hakkinda["icerik"]; ?>
+                     <?php echo $kullanici["hakkimda"]; ?>
                     </div>
                     <div class="timeline-footer">
                       
