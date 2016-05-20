@@ -10,7 +10,16 @@ if(@$_POST){
 			$sonuc=mysqli_query($conn,$sorgu);
 	
 		}
+		if(@$_POST["sil"])
+		{
+			global $conn;
+			$id=@$_GET["id"];
+			$query5 = "DELETE FROM `tbl_proje` WHERE id=".$id;
+			$sonuc5 = mysqli_query($conn,$query5);
+			header("Location:index.php?sayfa=projeler-goster");
+		}
 	}
+
 ?>
 
 <div class="col-md-9" style="width:100%">
@@ -27,10 +36,15 @@ if(@$_POST){
             <div class="box-body no-padding">
               <div class="mailbox-controls">
               </div>
-              <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped">
+              <div class="table-responsive mailbox-messages box-body">
+                <table class="table table-bordered">
                   <tbody>
-			
+					<tr>
+					<td>#</td>
+					<td>Proje Adı</td>
+					<td>Proje Tarihi</td>
+					<td>İşlem</td>
+					</tr>
 			<?php
 		global $conn;
 
@@ -39,15 +53,19 @@ if(@$_POST){
 		$sonuc=mysqli_query($conn,$sorgu);
 
 		if($sonuc){
+			$i=1;
 			while($sutun=mysqli_fetch_row($sonuc)){
 				echo 
 				'				
             
                   <tr>
+					<td>'.$i.'</td>
                     <td class="mailbox-name" ><div id="'.$sutun[0].'" class="projeGetir" style="cursor:pointer;" >'.$sutun[1].'</div></td>
 					<td class="mailbox-date">'.$sutun[3].'</td>
+					<td><form method="POST" action="index.php?sayfa=projeler-goster&id='.$sutun[0].'"><input type="submit" name="sil"  class="btn btn-danger" value="Sil"/></form></td>
                   </tr>
                  ';
+				 $i++;
 				
 			}
 		}
