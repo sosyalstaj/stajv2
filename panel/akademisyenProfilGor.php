@@ -63,7 +63,24 @@
                 iletisim
                 </span>
             </li>
-                
+                 <li>
+                  <i class="fa fa-envelope bg-blue"></i>
+                  <div class="timeline-item">
+                    <span class="time"><i class="fa fa-clock-o"></i> </span>
+                    <h3 class="timeline-header"><a href="#"> Baslica Bilgiler</h3>
+                    <div class="timeline-body" style="padding-left:10px;">
+						Facebook : <?php echo $iletisim["facebook"]; ?><br>
+					    Web Site : <?php echo $iletisim["web_site"]; ?><br>
+					      Github : <?php echo $iletisim["github"]; ?><br>
+					    Telefon : <?php echo $iletisim["tel"]; ?><br>
+					    Gmail : <?php echo $iletisim["gmail"]; ?><br>
+                    </div>
+                    <div class="timeline-footer">
+                      <a href="index.php?sayfa=iletisim" class="btn btn-primary btn-xs">Duzenle</a>
+                     
+                    </div>
+                  </div>
+                </li>
             <li class="time-label">
                <span class="bg-green">
                 Resimler
