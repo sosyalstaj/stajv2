@@ -123,6 +123,13 @@
 		}else if($sayfa=="arama"){
 			require_once("arama.php");
 		}
+		else if($_SESSION["staj"]["rol"] == 1){
+			 require_once("ogrenciProfilGor.php");
+		}else if($_SESSION["staj"]["rol"] == 2){
+			 require_once("akademisyenProfilGor.php");
+		}else if($_SESSION["staj"]["rol"] == 3){
+			require_once("isyeriProfilGor.php");
+		}
 		
 	}
 
