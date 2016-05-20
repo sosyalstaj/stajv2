@@ -57,8 +57,8 @@ if(@$_POST["sil"]){
 
                   <div class="col-sm-10">
                     <select name="cinsiyet" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                 	 <option value='1' selected="<?php if($kisi["cinsiyet"]==1)echo "selected";?>">Erkek</option>
-				 	 <option value='0' selected="<?php if($kisi["cinsiyet"]==0)echo "selected";?>">Kadın</option>
+                 	 <option value='1' "<?php if($kisi["cinsiyet"]==1)echo "selected='selected'";?>">Erkek</option>
+				 	         <option value='0' "<?php if($kisi["cinsiyet"]==0)echo "selected='selected'";?>">Kadın</option>
 					</select>
                   </div>
 				  
