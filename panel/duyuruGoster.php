@@ -16,7 +16,7 @@ if(@$_POST){
 <div class="col-md-9" style="width:100%">
           <div class="box box-primary" >
 		<div class="box-header with-border">
-				<h3 class="box-title">Projeler</h3>
+				<h3 class="box-title">Duyuru</h3>
 				<div class="box-tools pull-right">
 					<?php echo " ".Date("j-n-o"); ?>
               </div>
@@ -34,7 +34,7 @@ if(@$_POST){
 			<?php
 		global $conn;
 
-		$sorgu = "SELECT * FROM `tbl_duyuru` WHERE `user_id`='".$id."'";
+		$sorgu = "SELECT * FROM tbl_duyuru WHERE user_id=$id";
 		$sonuc=mysqli_query($conn,$sorgu);
 
 		if($sonuc){
