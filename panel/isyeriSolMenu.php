@@ -1,4 +1,4 @@
-      <ul class="sidebar-menu">
+﻿      <ul class="sidebar-menu">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
          <li class="treeview">
@@ -19,8 +19,8 @@
 			<li class="treeview">
           <a href="#"><i class="fa fa-edit"></i> <span>BAŞVURULAR</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="index.php?sayfa=basvurular-goster">Göster</a></li>
-			<li><a href="index.php?sayfa=basvurular-gecmis">Geçmiş</a></li>
+            <li><a href="index.php?sayfa=basvurular-goster">Başvuru İstekleri</a></li>
+			<li><a href="index.php?sayfa=basvurular-gecmis">Başvuru Listesi</a></li>
           </ul>
         </li>
 		<li class="treeview">
