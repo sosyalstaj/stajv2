@@ -77,9 +77,9 @@ else if (@$_POST){
                        <?php echo $row["aciklama"]; ?>
                       </td>
                       <td><?php echo $row["tarih"]; ?></td>
-					  <td><?php if ($row["anlasma"]==1){ echo "Anlasma Saglandi"; } 
-							 else if ($row["anlasma"]==0) {echo "Reddedildi"; }
-							 else if ($row["anlasma"]==-1) {echo "Onay Bekleniyor"; } ?>
+					  <?php if ($row["anlasma"]==1){ echo "<td class=\"btn-success\" >Anlasma Saglandi"; } 
+							 else if ($row["anlasma"]==0) {echo "<td class=\"btn-danger\">Reddedildi"; }
+							 else if ($row["anlasma"]==-1) {echo "<td class=\"btn-warning\">Onay Bekleniyor"; } ?>
 					  </td>
 					  <form action="" method="POST">
 					    <td>

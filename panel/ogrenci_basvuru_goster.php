@@ -9,8 +9,8 @@
                       <th style="width: 10px">#</th>
                       <th>Önsöz</th>
                       <th>Açıklama</th>
-                      <th style="width: 50">Tarih</th>
-					   <th style="width: 50px">Anlaşma</th>
+                      <th style="width: 100px">Tarih</th>
+					   <th style="width: 200px">Anlaşma</th>
                     </tr>
 
 
@@ -46,8 +46,14 @@
                        <?php echo $row["aciklama"]; ?>
                       </td>
                       <td><?php echo $row["tarih"]; ?></td>
-					  <td><?php echo $anlasma ?></td>
-					 
+					  <?php
+					 if($row["anlasma"]==0)
+					echo "<td class=\"btn-danger\">$anlasma </td>";
+					else if($row["anlasma"]==1)
+					echo "<td class=\"btn-success\"> $anlasma </td>";
+					else
+					echo "<td class=\"btn-warning\"> $anlasma </td>";
+					 ?>
                     </tr>
              
 				
