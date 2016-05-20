@@ -44,9 +44,9 @@ else if (@$_POST){
                       <th style="width: 10px">#</th>
 					   <th>Adı</th>
                       <th>Soyadı</th>
-                      <th>Acıklama</th>
+                      <th>Açıklama</th>
                       <th style="width: 100px">Tarih</th>
-					   <th style="width: 150px">Anlasma</th>
+					   <th style="width: 150px">Anlaşma</th>
 					   <th style="width: 100px">Onay - Red</th>
                     </tr>
 
