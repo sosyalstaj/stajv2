@@ -121,6 +121,9 @@
 		else if($sayfa=="ogrenci-listem"){
 			require_once("akademisyenogrencilistesi.php");
 		}
+		else{
+			require_once("profilgor.php");
+		}
 	}
 
 	function islemler()
