@@ -155,7 +155,7 @@
 					$k++;
 			
 				?>
-				<img src="<?php echo $foto["foto"]; ?> alt="..." class="margin"/>
+				<img src="<?php echo $foto["foto"]; ?>" alt="..." class="margin" style="width:300px;height:250px;" />
 				<?php
 				
 				
