@@ -292,6 +292,8 @@
 			{
 			    $query .=",foto='$yuklenecek_dosya' ";
 			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+				$query3="insert into tbl_foto(foto,user_id) values('$yuklenecek_dosya',$id)";
+				$sonuc4 =mysqli_query($conn,$query3);
 			}else
 			{
 				$msg =errorMesaj("Foto yüklenemedi");
@@ -334,6 +336,8 @@
 			{
 			    $query .=",foto='$yuklenecek_dosya' ";
 			    $_SESSION["staj"]["foto"]=$yuklenecek_dosya;
+				$query3="insert into tbl_foto(foto,user_id) values('$yuklenecek_dosya',$id)";
+				$sonuc4 =mysqli_query($conn,$query3);
 			}else
 			{
 				$msg =errorMesaj("Foto yüklenemedi");
