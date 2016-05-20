@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $id=$_SESSION["staj"]["id"];
 if(@$_POST["onay"]){
 	$gelen=$_POST["anid"];
@@ -36,14 +36,15 @@ else if (@$_POST){
 <div class="col-md-6" style="width:100%;">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Basvurular</h3>
+                  <h3 class="box-title">Başvurular</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table class="table table-bordered">
                     <tbody><tr>
                       <th style="width: 10px">#</th>
-                      <th>Onsoz</th>
-                      <th>Aciklama</th>
+					   <th>Adı</th>
+                      <th>Soyadı</th>
+                      <th>Acıklama</th>
                       <th style="width: 100px">Tarih</th>
 					   <th style="width: 150px">Anlasma</th>
 					   <th style="width: 100px">Onay - Red</th>
@@ -65,14 +66,26 @@ else if (@$_POST){
 	$k=0;
 			while ($row = mysqli_fetch_array($sonuc)) {
 				$k++;
-				echo "g";
+				$ogrenciid=$row["ogrenci_id"];
+				$query54 = "select * from tbl_kullanici where id=$ogrenciid ";
+				$sonuc54 = mysqli_query($conn,$query54);
+				if($sonuc54)
+				{	
+	?>
+		
+	
+	
+	<?php
+
+			while ($row25 = mysqli_fetch_array($sonuc54)) {
 			?>
 			
 		
                     
                     <tr>
                       <td><?php echo $k; ?></td>
-                      <td><?php echo $row["onsoz"]; ?></td>
+					     <td><?php echo $row25["adi"]; ?></td>
+                      <td><?php echo $row25["soyadi"]; ?></td>
                       <td>
                        <?php echo $row["aciklama"]; ?>
                       </td>
@@ -101,7 +114,8 @@ else if (@$_POST){
 			
 			}
 		}
-
+			}
+		}
 
 ?>
      </tbody></table>
