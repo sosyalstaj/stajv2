@@ -1,6 +1,23 @@
 ﻿<?php
 $id=$_SESSION["staj"]["id"];
 
+if(@$_POST["sil"])
+		{
+			global $conn;
+			$id=@$_GET["id"];
+			echo $id;
+			$query5 = "UPDATE tbl_ogrenci SET aka_id=0,akaonay=0,akaokunma=0 WHERE user_id=".$id;
+			if($sonuc5 = mysqli_query($conn,$query5))
+			{
+				echo successMesaj("Öğrenci Silindi");
+				
+			}
+			else
+			{
+				echo errorMesaj("Öğrenci Silinemedi");
+				
+			}
+		}
 
 ?>
 
@@ -17,6 +34,7 @@ $id=$_SESSION["staj"]["id"];
                       <th>Adı</th>
                       <th>Soyadı</th>
                       <th style="width: 100px">Okul No</th>
+					   <th style="width: 50px">İşlem</th>
                     </tr>
 
 
@@ -54,7 +72,8 @@ $id=$_SESSION["staj"]["id"];
                       <td>
                        <?php echo $row2["soyadi"]; ?>
                       </td>
-                      
+                      <td><form method="POST" action="index.php?sayfa=ogrenci-listem&id=<?php echo $row["user_id"]; ?>"><input type="submit" name="sil"  class="btn btn-danger" value="Sil"/></form></td>
+                   
 					
 		
                     </tr>
