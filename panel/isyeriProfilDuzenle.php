@@ -101,11 +101,10 @@ if(@$_POST["sil"]){
                   </div>
                 </div>
               
-              <div class="box-footer">
+              
                 
                 <input type="submit" name="isyeriGuncelle" class="btn btn-info pull-right" value="Güncelle"/>
-              </div>
-              <!-- /.box-footer -->
+             
             </form>
 			
 			
