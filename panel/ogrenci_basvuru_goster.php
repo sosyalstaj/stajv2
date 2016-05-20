@@ -16,7 +16,7 @@
 
 
 <?php
-		if(@$_GET["id"])
+		if(@$_POST["sil"])
 		{
 			global $conn;
 			$id=@$_GET["id"];
@@ -72,7 +72,7 @@
 					else
 					echo "<td class=\"btn-warning\"> $anlasma </td>";
 					 ?>
-					 <td><a href="index.php?sayfa=basvurular-goster&id=<?php echo $row["id"]; ?>"><img src="img/icn_alert_error.png"></img></a></td>
+					 <td><form method="POST" action="index.php?sayfa=basvurular-goster&id=<?php echo $row["id"]; ?>"><input type="submit" name="sil"  class="btn btn-danger" value="Sil"/></form></td>
                     </tr>
              
 				
