@@ -18,17 +18,16 @@ if(@$_POST["basvur"]){
 	$onsoz=@$_POST["onsoz"];
 	$aciklama=@$_POST["aciklama"];
 	$tarih=date("j-n-o");
-	echo $tarih;
 
 $sorgu2="INSERT INTO `tbl_basvuru`(`isyeri_id`, `ogrenci_id`, `tarih`, `onsoz`, `aciklama`,anlasma,okundu) VALUES (".$isyeri_id.",".$ogrenci_id.",'".$tarih."','".$onsoz."','".$aciklama."',-1,0)";
-echo $sorgu2;
+
 	if($sonuc2=mysqli_query($conn,$sorgu2))
 	{	
-		echo "Başvuru yapıldı";
+		echo successMesaj("Başvuru Yapıldı");
 	}
 	else
 	{
-		echo "Başvuru yapılamadı";
+		echo errorMesaj("Başvuru Yapılamadı");
 	}
 }
 ?>

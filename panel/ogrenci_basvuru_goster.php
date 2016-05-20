@@ -11,11 +11,29 @@
                       <th>Açıklama</th>
                       <th style="width: 100px">Tarih</th>
 					   <th style="width: 200px">Anlaşma</th>
+					   <th style="width: 50px">İşlem</th>
                     </tr>
 
 
 <?php
-
+		if(@$_GET["id"])
+		{
+			global $conn;
+			$id=@$_GET["id"];
+			$query5 = "DELETE FROM `tbl_basvuru` WHERE id=".$id;
+			if($sonuc5 = mysqli_query($conn,$query5))
+			{
+				echo successMesaj("Başvuru Silindi");
+				
+			}
+			else
+			{
+				echo errorMesaj("Başvuru Silinemedi");
+				
+			}
+		}
+			
+		
 		global $conn;
 		$query = "select * from tbl_basvuru where ogrenci_id=".$_SESSION["staj"]["id"];
 		$sonuc = mysqli_query($conn,$query);
@@ -54,6 +72,7 @@
 					else
 					echo "<td class=\"btn-warning\"> $anlasma </td>";
 					 ?>
+					 <td><a href="index.php?sayfa=basvurular-goster&id=<?php echo $row["id"]; ?>"><img src="img/icn_alert_error.png"></img></a></td>
                     </tr>
              
 				
