@@ -5,7 +5,6 @@ if(@$_POST["sil"])
 		{
 			global $conn;
 			$id=@$_GET["id"];
-			echo $id;
 			$query5 = "UPDATE tbl_ogrenci SET aka_id=0,akaonay=0,akaokunma=0 WHERE user_id=".$id;
 			if($sonuc5 = mysqli_query($conn,$query5))
 			{

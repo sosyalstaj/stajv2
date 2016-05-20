@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 
@@ -181,12 +181,9 @@
           <div class="row" style="margin-top: 10px;">
             <div class="col-md-12">
               <div class="box box-primary"> 
-                <div class="box-header">
-                  <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
-                </div>
                 <div class="box-body">
                   <pre style="font-weight: 600;">
-						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]."kullanicisina aittir. ";?>
+						<?php echo "Bu bilgiler ".$kullanici["adi"]." ".$kullanici["soyadi"]." kullanıcısına aittir. ";?>
     
                   </pre>
                 </div><!-- /.box-body -->

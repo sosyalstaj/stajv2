@@ -82,8 +82,8 @@ else if (@$_POST){
                       </td>
                       <td><?php echo $row["okul_no"]; ?></td>
 					  <td><?php if ($row["akaonay"]==1){ echo "Öğrenciniz"; } 
-							 else if ($row["akaonay"]==0) {echo "Reddedildi"; }
-							 else if ($row["akaonay"]==-1) {echo "Onay Bekleniyor"; } ?>
+							 else if ($row["akaonay"]==0) {echo "Onay Bekleniyor"; }
+							 else if ($row["akaonay"]==-1) {echo "Öğrenci reddedildi"; } ?>
 					  </td>
 					  <form action="" method="POST">
 					    <td>
