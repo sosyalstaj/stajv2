@@ -80,14 +80,14 @@ if(@$_POST){
             <!-- /.box-header -->
             <div class="box-body no-padding">
               <div class="mailbox-read-info">
-                <div id="projeAdi"></div>
+                <div id="duyuruAdi"></div>
                 <div id="tarih"></div>
               </div>
               <!-- /.mailbox-read-info -->
               <div class="mailbox-controls with-border text-center">
               </div>
               <!-- /.mailbox-controls -->
-              <div id="projeIcerik" class="mailbox-read-message">
+              <div id="duyuruIcerik" class="mailbox-read-message">
 
               </div>
               <!-- /.mailbox-read-message -->
@@ -122,7 +122,7 @@ $(document).ready(function()
 			console.log("this: "+ this.id);
 			$.ajax({
 			  method: "POST",
-			  url: "projeGetir.php",
+			  url: "duyuruGetir.php",
 			  data: { "q" : this.id },
 			  dataType: "json",
 			  success:function(veri){
@@ -136,8 +136,8 @@ $(document).ready(function()
 					if(veri["durum"]==true){
 						 
 						$(".box-title").html("duyuru #"+veri["id"]);
-						$("#projeAdi").html("<h3>"+veri["d_adi"]+"</h3>");
-						$("#projeIcerik").html(veri["d_icerik"]);
+						$("#duyuruAdi").html("<h3>"+veri["d_adi"]+"</h3>");
+						$("#duyuruIcerik").html(veri["d_icerik"]);
 						$("#tarih").html(veri["d_tarih"]);
 						$("#idGizli").val(veri["id"]);
 						

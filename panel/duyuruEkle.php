@@ -8,7 +8,7 @@ if(@$_POST){
 			$d_icerik=$_POST["duyuruIcerik"];
 			$tarih=Date("j-n-o");
 			global $conn;
-			$sorgu = "INSERT INTO `tbl_duyuru`(`id`, `baslik`, `icerik`, `tarih`) VALUES('".$d_adi."','".$d_icerik."','".$tarih."','".$id."')";
+			$sorgu = "INSERT INTO `tbl_duyuru`( `baslik`, `icerik`, `tarih`,`user_id`) VALUES('".$d_adi."','".$d_icerik."','".$tarih."','".$id."')";
 			$sonuc=mysqli_query($conn,$sorgu);
 		}
 	}
