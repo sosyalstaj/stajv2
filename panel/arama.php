@@ -1,4 +1,4 @@
-
+<form method="POST" id="frmArama">
     <div class="col-md-3">
         <div class="box box-solid">
             <div class="box-header with-border">
@@ -10,39 +10,53 @@
               		<div class="external-event bg-aqua">
                       <div class="checkbox">
                           <label>
-                            <input type="checkbox"> Check me out
+                            <input name="akademisyen" value="1" type="checkbox"> Akademisyen
                           </label>
                        </div>
                   </div>
-	                <div class="external-event bg-green ">Lunch</div>
-	                <div class="external-event bg-yellow ">Go home</div>
-	                <div class="external-event bg-aqua " >Do homework</div>
-	                <div class="external-event bg-light-blue ">Work on UI design</div>
-	                <div class="external-event bg-red ">Sleep tight</div>
+	                <div class="external-event bg-green ">
+                        <div class="checkbox">
+                          <label>
+                            <input name="isyeri" type="checkbox" value="1"> İşyeri
+                          </label>
+                       </div>
+                  </div>
+	                <div class="external-event bg-yellow ">
+                        <div class="checkbox">
+                          <label>
+                            <input name="ogrenci" type="checkbox" value="1"> Öğrenci
+                          </label>
+                       </div>
+                  </div>
+	                
+	                <div class="external-event bg-light-blue ">
+                      <div class="checkbox">
+                          <label>
+                            <input name="projeler" value="1" type="checkbox"> Projeler
+                          </label>
+                       </div>
+                  </div>
+	                <div class="external-event bg-red ">
+                        <div class="checkbox">
+                          <label>
+                            <input name="sehir" type="checkbox" value="1"> Şehir
+                          </label>
+                       </div>
+                  </div>
               </div>
             </div>
         </div>
-        <div class="box box-solid">
-            <div class="box-header with-border">
-              	<h3 class="box-title">Create Event</h3>
-            </div>
-            <div class="box-body">
-             
-            	<div class="input-group">
-               		<input id="new-event" type="text" class="form-control" placeholder="Event Title">
-                	<div class="input-group-btn">
-                  		<button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
-                	</div>
-                </div>
-            </div>
-        </div>
+
     </div>
     
     <div class="col-md-9">
         <div class="form-group">
-            <input type="email" id="inputSuccess" class="form-control" placeholder="Aranacak ifadeyi girin">
+            <input type="text" name="arama" id="inputSuccess" onkeyup="ara()" 
+            
+            class="form-control" placeholder="Aranacak ifadeyi girin">
         </div>
     </div>
+</form>
 <div id="arama-sonuc" class="col-md-9">
 
 </div>

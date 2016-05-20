@@ -7,6 +7,7 @@
 	{
 		// session atanmamş sa login.php ye yönlendir
 		if(!isset($_SESSION["staj"])){
+			session_destroy();
 			header("Location: ../index.php?sayfa=giris");
 		}
 	}

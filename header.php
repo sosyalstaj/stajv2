@@ -33,24 +33,13 @@
                     </li> 
 
                     <li <?php if(@$_GET["sayfa"] == "kayit_ol"){echo "class='active'";}?> >
-					<?php 
-						
-						if(isset($_SESSION["staj"]))
-							echo '  <a href="panel/index.php">Kayıt Ol</a>';
-						else
-							echo '  <a href="index.php?sayfa=kayit_ol">Kayıt Ol</a>';
-						?>
+					<a href="index.php?sayfa=kayit_ol">Kayıt Ol</a>
+					
                         
                     </li> 
 					
 					<li <?php if(@$_GET["sayfa"] == "giris"){echo "class='active'";}?> >
-						<?php 
-						
-						if(isset($_SESSION["staj"]))
-							echo '  <a href="panel/index.php">Giriş</a>';
-						else
-							echo '  <a href="index.php?sayfa=giris">Giriş</a>';
-						?>
+						  <a href="index.php?sayfa=giris">Giriş</a>
                       
                     </li> 
                 </ul>
