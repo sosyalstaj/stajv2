@@ -162,12 +162,8 @@
 	<span style="color:red; font-size:15px;" title="Bu alan zorunludur.">*</span>
   </label>
     <div class="col-sm-6">
-        <select name="sehir" size="1" id="il-sec" class="form-control">
-		   <option value="-1">ilk seç</option>
-                 <?php 
-                    il_listele();
-                ?>
-		</select>
+     <input type="text" class="form-control" id="il" placeholder="il"  name="il"  >
+
 		</div>
 	</div>
 	
@@ -177,9 +173,7 @@
 	<span style="color:red; font-size:15px;" title="Bu alan zorunludur.">*</span>
   </label>
     <div class="col-sm-6">
-      <select name="ilce" size="1" id="ilce-sec" class="form-control">
-               <?php   ilce_listele($_POST["sehir"]); ?>
-       </select>
+          <input type="text" class="form-control" id="ilce" placeholder="ilce"  name="ilce"  >
 		</div>
 	</div>
 	

@@ -241,7 +241,7 @@ aşağıda kimlik bilgileri verilen öğrencimizin stajını kuruluşunuzda/işy
 	<TD class="tr9 td17" colspan="3"><P class="p1 ft8"><?php echo @$_POST["tc"]; ?></P></TD>
 	 
 	<TD colspan=3 class="tr9 td36"><P class="p10 ft11">Nüfusa Kayıtlı Olduğu İl</P></TD>
-	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["sehir"]; ?></P></TD>
+	<TD class="tr9 td21" colspan="2"><P class="p1 ft8"><?php echo @$_POST["il"]; ?></P></TD>
 	 
 </TR>
 <TR>
