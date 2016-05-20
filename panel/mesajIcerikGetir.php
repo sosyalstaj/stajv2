@@ -6,6 +6,8 @@ global $conn;
 
 
 $sorgu = "SELECT K.adi, K.soyadi, M.konu, M.mesaj, M.id FROM tbl_mesaj AS M INNER JOIN tbl_kullanici AS K ON M.gonderen_id = K.id WHERE M.id=".$_POST["q"]."";
+$sorgu1 = "UPDATE `tbl_mesaj` SET `durum`=1 WHERE `id`=".$_POST["q"]."";
+$sonuc1 = mysqli_query($conn,$sorgu1);
 $sonuc = mysqli_query($conn,$sorgu);
 
 
