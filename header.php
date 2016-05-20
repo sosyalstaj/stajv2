@@ -37,7 +37,14 @@
                     </li> 
 					
 					<li <?php if(@$_GET["sayfa"] == "giris"){echo "class='active'";}?> >
-                        <a href="index.php?sayfa=giris">Giriş</a>
+						<?php 
+						
+						if(isset($_SESSION["staj"]))
+							echo '  <a href="panel/index.php">Giriş</a>';
+						else
+							echo '  <a href="index.php?sayfa=giris">Giriş</a>';
+						?>
+                      
                     </li> 
                 </ul>
 
