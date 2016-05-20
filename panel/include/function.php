@@ -120,6 +120,8 @@
 		}
 		else if($sayfa=="ogrenci-listem"){
 			require_once("akademisyenogrencilistesi.php");
+		}else if($sayfa=="arama"){
+			require_once("arama.php");
 		}
 		
 	}
